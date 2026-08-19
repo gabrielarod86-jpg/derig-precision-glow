@@ -5,6 +5,8 @@ import kit from "@/assets/product-kit.jpg";
 import drills from "@/assets/product-drills.jpg";
 import components from "@/assets/product-components.jpg";
 import biotite from "@/assets/biotite-surface.jpg";
+import implantsFamily from "@/assets/implants-family-original.png";
+import backgroundTexture from "@/assets/bg-texture.jpg";
 
 const items = [
   {
@@ -39,6 +41,8 @@ const items = [
   },
 ];
 
+const secondaryItems = items.slice(1);
+
 export function ProductEcosystem() {
   return (
     <section id="sobre" className="relative py-24 md:py-32">
@@ -54,19 +58,68 @@ export function ProductEcosystem() {
           </p>
         </div>
 
+        <div className="mt-12">
+          <ImplantFeature />
+        </div>
+
         {/* Mobile: carousel | Desktop: grid */}
-        <div className="mt-12 lg:hidden -mx-5 px-5 flex gap-4 overflow-x-auto scroll-hide snap-x snap-mandatory">
-          {items.map((it) => (
+        <div className="mt-6 lg:hidden -mx-5 px-5 flex gap-4 overflow-x-auto scroll-hide snap-x snap-mandatory">
+          {secondaryItems.map((it) => (
             <EcoCard key={it.title} {...it} className="min-w-[78%] snap-start" />
           ))}
         </div>
-        <div className="mt-12 hidden lg:grid grid-cols-3 gap-6">
-          {items.map((it) => (
+        <div className="mt-6 hidden lg:grid grid-cols-3 gap-6">
+          {secondaryItems.map((it) => (
             <EcoCard key={it.title} {...it} />
           ))}
         </div>
       </div>
     </section>
+  );
+}
+
+function ImplantFeature() {
+  return (
+    <article className="card-premium relative min-h-[620px] overflow-hidden sm:min-h-[560px] md:min-h-[500px]">
+      <img
+        src={backgroundTexture}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover opacity-45"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,3,3,0.98)_0%,rgba(3,3,3,0.90)_38%,rgba(3,3,3,0.28)_72%,rgba(3,3,3,0.72)_100%)]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute bottom-[-12%] right-[-2%] h-[92%] w-[72%] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.13)_0%,rgba(255,255,255,0.03)_42%,transparent_72%)] blur-2xl"
+      />
+
+      <img
+        src={implantsFamily}
+        alt="Família de implantes dentários Dérig"
+        loading="lazy"
+        className="absolute bottom-[-3%] left-1/2 w-[96%] max-w-[760px] -translate-x-1/2 object-contain drop-shadow-[0_28px_45px_rgba(0,0,0,0.72)] md:left-auto md:right-[-1%] md:w-[62%] md:translate-x-0"
+      />
+
+      <div className="relative z-10 flex min-h-[620px] items-start p-7 sm:min-h-[560px] sm:p-10 md:min-h-[500px] md:items-center md:p-12">
+        <div className="max-w-sm">
+          <span className="eyebrow">Linha de implantes</span>
+          <h3 className="text-display mt-4 text-4xl sm:text-5xl">Implantes</h3>
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+            Diferentes geometrias e conexões para oferecer estabilidade,
+            precisão e previsibilidade em cada indicação clínica.
+          </p>
+          <a
+            href="#produtos"
+            className="mt-7 inline-flex items-center gap-2 rounded-full border border-[color:var(--orange)] px-5 py-3 text-sm font-semibold text-[color:var(--orange)] transition-colors hover:bg-[color:var(--orange)] hover:text-black"
+          >
+            Conhecer a linha <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </div>
+      </div>
+    </article>
   );
 }
 
