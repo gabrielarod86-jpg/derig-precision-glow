@@ -72,18 +72,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Dérig Precision Hub is a modern, high-tech website showcasing premium dental implants and surgical solutions." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Dérig Precision Hub is a modern, high-tech website showcasing premium dental implants and surgical solutions." },
+      { title: "Dérig Implantes do Brasil" },
+      { name: "description", content: "Implantes, componentes e soluções cirúrgicas Dérig para a implantodontia de alta performance." },
+      { name: "author", content: "Dérig Implantes do Brasil" },
+      { property: "og:title", content: "Dérig Implantes do Brasil" },
+      { property: "og:description", content: "Engenharia, tecnologia e precisão para implantodontia de alta performance." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Dérig Precision Hub is a modern, high-tech website showcasing premium dental implants and surgical solutions." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3e86a649-4947-49c7-9ca3-52ddb779d2e9/id-preview-1b4da05c--f1a84158-e6d1-44c4-8efe-c19569c92a56.lovable.app-1779819127902.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3e86a649-4947-49c7-9ca3-52ddb779d2e9/id-preview-1b4da05c--f1a84158-e6d1-44c4-8efe-c19569c92a56.lovable.app-1779819127902.png" },
+      { name: "twitter:title", content: "Dérig Implantes do Brasil" },
+      { name: "twitter:description", content: "Engenharia, tecnologia e precisão para implantodontia de alta performance." },
     ],
     links: [
       {
@@ -100,7 +97,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>

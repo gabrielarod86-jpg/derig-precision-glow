@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
-import kit from "@/assets/product-kit.jpg";
-import drills from "@/assets/product-drills.jpg";
+import kitGuide from "@/assets/kits/kit-derig-guide.png";
+import kitConico from "@/assets/kits/kit-cirurgico-conico.png";
 
 const items = [
   "Kit Cirúrgico Cônico",
@@ -39,7 +39,7 @@ export function KitsAndDrills() {
             ))}
           </ul>
 
-          <a href="#contato" className="btn-primary mt-8">
+          <a href="/kits-cirurgicos" className="btn-primary mt-8">
             Ver kits e instrumentais <ArrowRight className="h-4 w-4" />
           </a>
         </div>
@@ -47,18 +47,18 @@ export function KitsAndDrills() {
         <div className="lg:col-span-7 grid grid-cols-2 gap-4">
           <div className="card-premium overflow-hidden aspect-[3/4]">
             <img
-              src={kit}
-              alt="Kit cirúrgico Dérig"
+              src={kitGuide}
+              alt="Kit Dérig Guide para cirurgia guiada"
               loading="lazy"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
           <div className="card-premium overflow-hidden aspect-[3/4] translate-y-8">
             <img
-              src={drills}
-              alt="Fresas cirúrgicas Dérig"
+              src={kitConico}
+              alt="Kit cirúrgico cônico Dérig"
               loading="lazy"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
         </div>

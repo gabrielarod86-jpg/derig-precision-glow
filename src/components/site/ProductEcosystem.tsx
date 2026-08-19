@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import implant from "@/assets/product-conemorse.jpg";
-import hex from "@/assets/product-hexagon.jpg";
-import kit from "@/assets/product-kit.jpg";
+import kitGuide from "@/assets/kits/kit-derig-guide.png";
+import kitProtetico from "@/assets/kits/kit-protetico.png";
 import drills from "@/assets/product-drills.jpg";
 import components from "@/assets/components-showcase-exact.png";
 import biotite from "@/assets/biotite-surface.jpg";
@@ -22,12 +22,12 @@ const items = [
   {
     title: "Kits Cirúrgicos",
     desc: "Organização, padronização e segurança no fluxo de instalação dos implantes.",
-    img: kit,
+    img: kitGuide,
   },
   {
     title: "Kit Protético",
     desc: "Instrumentais e acessórios para conduzir o fluxo reabilitador com mais controle.",
-    img: hex,
+    img: kitProtetico,
   },
   {
     title: "Fresas Cirúrgicas",
@@ -144,7 +144,9 @@ function EcoCard({
           alt={title}
           loading="lazy"
           className={`h-full w-full transition-transform duration-700 group-hover:scale-105 ${
-            title === "Componentes" ? "object-contain p-5" : "object-cover"
+            ["Componentes", "Kits Cirúrgicos", "Kit Protético"].includes(title)
+              ? "object-contain p-3"
+              : "object-cover"
           }`}
         />
       </div>
@@ -154,7 +156,13 @@ function EcoCard({
           {desc}
         </p>
         <a
-          href={title === "Componentes" ? "#componentes" : "#produtos"}
+          href={
+            title === "Componentes"
+              ? "#componentes"
+              : title === "Kits Cirúrgicos"
+                ? "/kits-cirurgicos"
+                : "#produtos"
+          }
           className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[color:var(--orange)] hover:gap-2.5 transition-all"
         >
           Ver linha <ArrowUpRight className="h-4 w-4" />

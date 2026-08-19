@@ -3,13 +3,13 @@ import { Menu, X, MessageCircle } from "lucide-react";
 import { Logo } from "./Logo";
 
 const nav = [
-  { label: "A Dérig", href: "#sobre" },
-  { label: "Produtos", href: "#produtos" },
-  { label: "Tecnologia Biotite", href: "#biotite" },
-  { label: "Qualidade", href: "#qualidade" },
-  { label: "Downloads", href: "#downloads" },
-  { label: "Onde Comprar", href: "#contato" },
-  { label: "Contato", href: "#contato" },
+  { label: "A Dérig", href: "/#sobre" },
+  { label: "Produtos", href: "/#produtos" },
+  { label: "Tecnologia Biotite", href: "/#biotite" },
+  { label: "Qualidade", href: "/#qualidade" },
+  { label: "Downloads", href: "/#downloads" },
+  { label: "Onde Comprar", href: "/#contato" },
+  { label: "Contato", href: "/#contato" },
 ];
 
 export function Header() {
@@ -32,7 +32,7 @@ export function Header() {
       }`}
     >
       <div className="container-x flex items-center justify-between h-16 md:h-20">
-        <a href="#top" aria-label="Dérig — início">
+        <a href="/" aria-label="Dérig — início">
           <Logo />
         </a>
 
@@ -49,7 +49,7 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <a href="#contato" className="btn-primary text-sm">
+          <a href="/#contato" className="btn-primary text-sm">
             <MessageCircle className="h-4 w-4" />
             Fale com um consultor
           </a>
@@ -78,7 +78,7 @@ export function Header() {
               </a>
             ))}
             <a
-              href="#contato"
+              href="/#contato"
               onClick={() => setOpen(false)}
               className="btn-primary mt-4 justify-center"
             >
