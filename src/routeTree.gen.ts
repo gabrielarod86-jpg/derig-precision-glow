@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ImplantesRouteImport } from './routes/implantes'
 import { Route as KitsCirurgicosRouteImport } from './routes/kits-cirurgicos'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImplantesRoute = ImplantesRouteImport.update({
+  id: '/implantes',
+  path: '/implantes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KitsCirurgicosRoute = KitsCirurgicosRouteImport.update({
@@ -25,27 +31,31 @@ const KitsCirurgicosRoute = KitsCirurgicosRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/implantes': typeof ImplantesRoute
   '/kits-cirurgicos': typeof KitsCirurgicosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/implantes': typeof ImplantesRoute
   '/kits-cirurgicos': typeof KitsCirurgicosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/implantes': typeof ImplantesRoute
   '/kits-cirurgicos': typeof KitsCirurgicosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/kits-cirurgicos'
+  fullPaths: '/' | '/implantes' | '/kits-cirurgicos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/kits-cirurgicos'
-  id: '__root__' | '/' | '/kits-cirurgicos'
+  to: '/' | '/implantes' | '/kits-cirurgicos'
+  id: '__root__' | '/' | '/implantes' | '/kits-cirurgicos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ImplantesRoute: typeof ImplantesRoute
   KitsCirurgicosRoute: typeof KitsCirurgicosRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/implantes': {
+      id: '/implantes'
+      path: '/implantes'
+      fullPath: '/implantes'
+      preLoaderRoute: typeof ImplantesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kits-cirurgicos': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ImplantesRoute: ImplantesRoute,
   KitsCirurgicosRoute: KitsCirurgicosRoute,
 }
 export const routeTree = rootRouteImport

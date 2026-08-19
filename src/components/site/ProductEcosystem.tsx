@@ -103,7 +103,7 @@ function ImplantFeature() {
             precisão e previsibilidade em cada indicação clínica.
           </p>
           <a
-            href="#produtos"
+            href="/implantes"
             className="mt-7 inline-flex items-center gap-2 rounded-full border border-[color:var(--orange)] px-5 py-3 text-sm font-semibold text-[color:var(--orange)] transition-colors hover:bg-[color:var(--orange)] hover:text-black"
           >
             Conhecer a linha <ArrowUpRight className="h-4 w-4" />
