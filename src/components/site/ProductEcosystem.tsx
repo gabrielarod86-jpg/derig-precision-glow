@@ -5,7 +5,7 @@ import kit from "@/assets/product-kit.jpg";
 import drills from "@/assets/product-drills.jpg";
 import components from "@/assets/product-components.jpg";
 import biotite from "@/assets/biotite-surface.jpg";
-import implantsFamily from "@/assets/implants-family-original.png";
+import implantsShowcase from "@/assets/implants-showcase-exact.png";
 import backgroundTexture from "@/assets/bg-texture.jpg";
 
 const items = [
@@ -80,7 +80,7 @@ export function ProductEcosystem() {
 
 function ImplantFeature() {
   return (
-    <article className="card-premium relative min-h-[620px] overflow-hidden sm:min-h-[560px] md:min-h-[500px]">
+    <article className="card-premium relative min-h-[720px] overflow-hidden sm:min-h-[660px] md:min-h-[520px]">
       <img
         src={backgroundTexture}
         alt=""
@@ -96,14 +96,16 @@ function ImplantFeature() {
         className="absolute bottom-[-12%] right-[-2%] h-[92%] w-[72%] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.13)_0%,rgba(255,255,255,0.03)_42%,transparent_72%)] blur-2xl"
       />
 
-      <img
-        src={implantsFamily}
-        alt="Família de implantes dentários Dérig"
-        loading="lazy"
-        className="absolute bottom-[-3%] left-1/2 w-[96%] max-w-[760px] -translate-x-1/2 object-contain drop-shadow-[0_28px_45px_rgba(0,0,0,0.72)] md:left-auto md:right-[-1%] md:w-[62%] md:translate-x-0"
-      />
+      <div className="absolute inset-x-2 bottom-3 h-[390px] sm:inset-x-4 sm:bottom-4 sm:h-[410px] md:inset-y-5 md:left-auto md:right-4 md:h-auto md:w-[68%]">
+        <img
+          src={implantsShowcase}
+          alt="Família de implantes dentários Dérig, incluindo implante zigomático"
+          loading="lazy"
+          className="h-full w-full object-contain object-bottom drop-shadow-[0_28px_45px_rgba(0,0,0,0.72)]"
+        />
+      </div>
 
-      <div className="relative z-10 flex min-h-[620px] items-start p-7 sm:min-h-[560px] sm:p-10 md:min-h-[500px] md:items-center md:p-12">
+      <div className="relative z-10 flex min-h-[720px] items-start p-7 sm:min-h-[660px] sm:p-10 md:min-h-[520px] md:items-center md:p-12">
         <div className="max-w-sm">
           <span className="eyebrow">Linha de implantes</span>
           <h3 className="text-display mt-4 text-4xl sm:text-5xl">Implantes</h3>
