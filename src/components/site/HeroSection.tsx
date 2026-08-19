@@ -1,5 +1,5 @@
 import { ArrowRight, Download } from "lucide-react";
-import heroImg from "@/assets/hero-implant-spotlight.png";
+import heroImg from "@/assets/hero-implant-spotlight-v2.png";
 
 const badges = [
   "Tecnologia Biotite",
