@@ -2,16 +2,17 @@ import implant from "@/assets/product-conemorse.jpg";
 import hex from "@/assets/product-hexagon.jpg";
 import kit from "@/assets/product-kit.jpg";
 import drills from "@/assets/product-drills.jpg";
-import components from "@/assets/product-components.jpg";
+import components from "@/assets/components-showcase-exact.png";
+import kitComponents from "@/assets/product-components.jpg";
 import biotite from "@/assets/biotite-surface.jpg";
 
 const products = [
   { name: "Implantes Cone Morse", desc: "Conexão cônica de alta estabilidade mecânica.", img: implant },
   { name: "Implantes Hexágono Externo", desc: "Versatilidade protética com referência clínica consolidada.", img: hex },
   { name: "Implantes Triplo Canal", desc: "Indexação precisa para reabilitações múltiplas.", img: implant },
-  { name: "Componentes Protéticos", desc: "Linha completa para fluxo cirúrgico-protético integrado.", img: components },
+  { name: "Componentes Protéticos", desc: "Soluções convencionais e digitais para sistemas CMH, TRI e HEX.", img: components },
   { name: "Kits Cirúrgicos", desc: "Padronização e segurança na instalação dos implantes.", img: kit },
-  { name: "Kit Protético", desc: "Instrumentais dedicados ao fluxo reabilitador.", img: components },
+  { name: "Kit Protético", desc: "Instrumentais dedicados ao fluxo reabilitador.", img: kitComponents },
   { name: "Fresas Cirúrgicas", desc: "Corte preciso e durabilidade no preparo ósseo.", img: drills },
   { name: "Instrumentais", desc: "Soluções auxiliares para procedimentos controlados.", img: drills },
   { name: "Biomateriais", desc: "Apoio ao processo regenerativo e à previsibilidade clínica.", img: biotite },
@@ -41,7 +42,9 @@ export function FeaturedProducts() {
                   src={p.img}
                   alt={p.name}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className={`h-full w-full transition-transform duration-700 group-hover:scale-105 ${
+                    p.name === "Componentes Protéticos" ? "object-contain p-5" : "object-cover"
+                  }`}
                 />
                 <div className="absolute top-3 left-3 text-[10px] uppercase tracking-[0.2em] px-2 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10">
                   Dérig
@@ -55,7 +58,7 @@ export function FeaturedProducts() {
                   </p>
                 </div>
                 <a
-                  href="#contato"
+                  href={p.name === "Componentes Protéticos" ? "#componentes" : "#contato"}
                   className="shrink-0 text-xs font-medium text-[color:var(--orange)] hover:underline"
                 >
                   Saiba mais

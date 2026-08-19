@@ -3,6 +3,7 @@ import { Header } from "@/components/site/Header";
 import { HeroSection } from "@/components/site/HeroSection";
 import { CertificationBar } from "@/components/site/CertificationBar";
 import { ProductEcosystem } from "@/components/site/ProductEcosystem";
+import { ComponentsFeature } from "@/components/site/ComponentsFeature";
 import { BiotiteTechnology } from "@/components/site/BiotiteTechnology";
 import { FeaturedProducts } from "@/components/site/FeaturedProducts";
 import { KitsAndDrills } from "@/components/site/KitsAndDrills";
@@ -55,6 +56,7 @@ function Index() {
         <HeroSection />
         <CertificationBar />
         <ProductEcosystem />
+        <ComponentsFeature />
         <BiotiteTechnology />
         <FeaturedProducts />
         <KitsAndDrills />

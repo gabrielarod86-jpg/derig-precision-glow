@@ -3,7 +3,7 @@ import implant from "@/assets/product-conemorse.jpg";
 import hex from "@/assets/product-hexagon.jpg";
 import kit from "@/assets/product-kit.jpg";
 import drills from "@/assets/product-drills.jpg";
-import components from "@/assets/product-components.jpg";
+import components from "@/assets/components-showcase-exact.png";
 import biotite from "@/assets/biotite-surface.jpg";
 import implantsShowcase from "@/assets/implants-showcase-exact.png";
 import backgroundTexture from "@/assets/bg-texture.jpg";
@@ -16,7 +16,7 @@ const items = [
   },
   {
     title: "Componentes",
-    desc: "Precisão protética para reabilitações funcionais, seguras e compatíveis.",
+    desc: "Soluções protéticas convencionais e digitais para sistemas CMH, TRI e HEX.",
     img: components,
   },
   {
@@ -143,7 +143,9 @@ function EcoCard({
           src={img}
           alt={title}
           loading="lazy"
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className={`h-full w-full transition-transform duration-700 group-hover:scale-105 ${
+            title === "Componentes" ? "object-contain p-5" : "object-cover"
+          }`}
         />
       </div>
       <div className="p-6">
@@ -152,7 +154,7 @@ function EcoCard({
           {desc}
         </p>
         <a
-          href="#produtos"
+          href={title === "Componentes" ? "#componentes" : "#produtos"}
           className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[color:var(--orange)] hover:gap-2.5 transition-all"
         >
           Ver linha <ArrowUpRight className="h-4 w-4" />
