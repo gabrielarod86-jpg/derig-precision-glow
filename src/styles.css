@@ -1,0 +1,236 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Dérig Implantes — premium dark + orange design system */
+
+@theme inline {
+  --font-sans: "Encode Sans", "Sansation", system-ui, sans-serif;
+  --font-display: "Encode Sans", "Sansation", system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-hairline: var(--hairline);
+  --color-orange: var(--orange);
+  --color-orange-glow: var(--orange-glow);
+}
+
+:root {
+  --radius: 0.875rem;
+
+  /* Brand */
+  --background: oklch(0.12 0.005 60);          /* #070707-ish */
+  --foreground: oklch(0.97 0.005 80);
+  --surface: oklch(0.16 0.006 60);             /* #11100F */
+  --surface-elevated: oklch(0.2 0.008 60);     /* card */
+  --hairline: oklch(1 0 0 / 8%);
+
+  --orange: oklch(0.72 0.18 48);               /* #F37A21 */
+  --orange-glow: oklch(0.72 0.18 48 / 35%);
+
+  --card: var(--surface);
+  --card-foreground: var(--foreground);
+  --popover: var(--surface-elevated);
+  --popover-foreground: var(--foreground);
+
+  --primary: var(--orange);
+  --primary-foreground: oklch(0.14 0.004 60);
+
+  --secondary: oklch(0.22 0.006 60);
+  --secondary-foreground: var(--foreground);
+
+  --muted: oklch(0.2 0.005 60);
+  --muted-foreground: oklch(0.7 0.01 80);
+
+  --accent: var(--orange);
+  --accent-foreground: oklch(0.14 0.004 60);
+
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: var(--orange);
+
+  --gradient-hero: radial-gradient(
+    1200px 600px at 70% 30%,
+    color-mix(in oklab, var(--orange) 35%, transparent),
+    transparent 60%
+  );
+  --gradient-panel: linear-gradient(
+    180deg,
+    oklch(0.18 0.006 60) 0%,
+    oklch(0.12 0.005 60) 100%
+  );
+  --shadow-glow: 0 30px 80px -20px color-mix(in oklab, var(--orange) 40%, transparent);
+  --shadow-card: 0 20px 60px -30px oklch(0 0 0 / 70%);
+}
+
+.dark {
+  /* keep same — site is dark by default */
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv01";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--orange);
+    color: var(--primary-foreground);
+  }
+}
+
+@layer components {
+  .container-x {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .container-x { padding-inline: 2rem; }
+  }
+
+  .text-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    line-height: 1.02;
+    font-weight: 700;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--orange);
+    font-weight: 600;
+  }
+
+  .glow-orange {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .hairline {
+    background: linear-gradient(90deg, transparent, var(--hairline), transparent);
+    height: 1px;
+    width: 100%;
+  }
+
+  .card-premium {
+    background: var(--gradient-panel);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-xl);
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  }
+  .card-premium:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in oklab, var(--orange) 40%, transparent);
+    box-shadow: 0 30px 60px -30px color-mix(in oklab, var(--orange) 25%, transparent);
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.5rem;
+    border-radius: 9999px;
+    background: var(--orange);
+    color: var(--primary-foreground);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+  }
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 30px -8px var(--orange-glow);
+    background: color-mix(in oklab, var(--orange) 90%, white);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.5rem;
+    border-radius: 9999px;
+    border: 1px solid var(--hairline);
+    color: var(--foreground);
+    font-weight: 500;
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+  .btn-ghost:hover {
+    border-color: color-mix(in oklab, var(--orange) 50%, transparent);
+    background: color-mix(in oklab, var(--orange) 6%, transparent);
+  }
+
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+    background-size: 3px 3px;
+    mix-blend-mode: overlay;
+    opacity: 0.5;
+  }
+
+  .scroll-hide::-webkit-scrollbar { display: none; }
+  .scroll-hide { scrollbar-width: none; }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.animate-float { animation: float-slow 6s ease-in-out infinite; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fade-up 0.8s ease-out both; }
