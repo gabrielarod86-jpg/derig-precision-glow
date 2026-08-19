@@ -16,11 +16,12 @@ import { Footer } from "@/components/site/Footer";
 import { MobileCTA } from "@/components/site/MobileCTA";
 import backgroundTexture from "@/assets/bg-texture.jpg";
 import implantsShowcase from "@/assets/implants-showcase-exact.png";
-import implantsFamily from "@/assets/implants-family-original.png";
-import productConemorse from "@/assets/product-conemorse.jpg";
-import productHexagon from "@/assets/product-hexagon.jpg";
-import heroImplant from "@/assets/hero-implant-spotlight-v2.png";
 import zigomaticImplant from "@/assets/implante-zigomatico-cm16.png";
+import bioneckCmhImage from "@/assets/implants/bioneck-cmh.png";
+import bioneckTriImage from "@/assets/implants/bioneck-tri.png";
+import dynamicCmhImage from "@/assets/implants/dynamic-cmh.png";
+import kortHexImage from "@/assets/implants/kort-hex.png";
+import biodentHexImage from "@/assets/implants/biodent-hex.png";
 
 export const Route = createFileRoute("/implantes")({
   head: () => ({
@@ -71,8 +72,8 @@ const implantLines: ImplantLine[] = [
     interface: "Cone Morse Hexagonal | CMH",
     description:
       "Implante cônico com interface interna única para todos os diâmetros e macrogeometria desenvolvida para ampliar estabilidade e contato ósseo.",
-    image: productConemorse,
-    imageMode: "cover",
+    image: bioneckCmhImage,
+    imageMode: "contain",
     features: [
       "Uma única interface interna cone morse para todos os diâmetros",
       "Sulcos retentivos nas roscas para maior área de contato e estabilidade primária",
@@ -99,7 +100,7 @@ const implantLines: ImplantLine[] = [
     interface: "Cone Morse Hexagonal | CMH",
     description:
       "Núcleo cônico e espiras largas com câmaras cortantes que possibilitam expansão e compressão óssea simultaneamente.",
-    image: heroImplant,
+    image: dynamicCmhImage,
     imageMode: "contain",
     features: [
       "Uma única interface interna cone morse para todos os diâmetros",
@@ -133,7 +134,7 @@ const implantLines: ImplantLine[] = [
     interface: "Triplo Canal Interno | TRI",
     description:
       "Implante cônico com triplo canal interno, microcanais cervicais e sistema mecânico de captura com identificação visual.",
-    image: implantsFamily,
+    image: bioneckTriImage,
     imageMode: "contain",
     features: [
       "Macrogeometria com alta estabilidade primária",
@@ -167,8 +168,8 @@ const implantLines: ImplantLine[] = [
     interface: "Hexágono Externo | HEX",
     description:
       "Implante cilíndrico levemente cônico na porção apical, com dupla rosca e câmaras de alta capacidade de corte.",
-    image: productHexagon,
-    imageMode: "cover",
+    image: biodentHexImage,
+    imageMode: "contain",
     features: [
       "Interface externa hexagonal",
       "Dupla rosca para agilizar a inserção e minimizar traumas",
@@ -201,8 +202,8 @@ const implantLines: ImplantLine[] = [
     interface: "Hexágono Externo | Implante Curto",
     description:
       "Implante curto com macrogeometria cilíndrica, porção apical levemente cônica e compatibilidade com a linha protética Biodent HEX.",
-    image: productHexagon,
-    imageMode: "cover",
+    image: kortHexImage,
+    imageMode: "contain",
     features: [
       "Comprimentos reduzidos de 5,5 e 7 mm",
       "Dupla rosca e câmaras cortantes na região apical",
@@ -578,7 +579,7 @@ function ImplantLineCard({ line }: { line: ImplantLine }) {
             src={line.image}
             alt={line.name}
             loading="lazy"
-            className={`relative h-full min-h-72 w-full ${line.imageMode === "cover" ? "object-cover" : "object-contain p-5"}`}
+            className={`relative h-full min-h-72 w-full ${line.imageMode === "cover" ? "object-cover" : "object-contain"}`}
           />
         </div>
         <div className="p-6 md:p-7">
