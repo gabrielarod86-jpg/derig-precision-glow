@@ -5,7 +5,6 @@ import { CertificationBar } from "@/components/site/CertificationBar";
 import { ProductEcosystem } from "@/components/site/ProductEcosystem";
 import { ComponentsFeature } from "@/components/site/ComponentsFeature";
 import { BiotiteTechnology } from "@/components/site/BiotiteTechnology";
-import { FeaturedProducts } from "@/components/site/FeaturedProducts";
 import { KitsAndDrills } from "@/components/site/KitsAndDrills";
 import { GlobalQuality } from "@/components/site/GlobalQuality";
 import { TechnicalLibrary } from "@/components/site/TechnicalLibrary";
@@ -55,10 +54,9 @@ function Index() {
       <main>
         <HeroSection />
         <CertificationBar />
+        <BiotiteTechnology />
         <ProductEcosystem />
         <ComponentsFeature />
-        <BiotiteTechnology />
-        <FeaturedProducts />
         <KitsAndDrills />
         <GlobalQuality />
         <TechnicalLibrary />

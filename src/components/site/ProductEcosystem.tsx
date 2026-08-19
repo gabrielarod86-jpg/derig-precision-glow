@@ -46,6 +46,7 @@ const secondaryItems = items.slice(1);
 export function ProductEcosystem() {
   return (
     <section id="sobre" className="relative py-24 md:py-32">
+      <span id="produtos" className="absolute -top-24" aria-hidden="true" />
       <div className="container-x">
         <div className="max-w-3xl">
           <span className="eyebrow">Ecossistema Dérig</span>

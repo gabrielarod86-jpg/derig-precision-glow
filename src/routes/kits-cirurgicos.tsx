@@ -162,32 +162,36 @@ function KitsCirurgicosPage() {
           />
           <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_75%_45%,rgba(255,255,255,0.13),transparent_34%),linear-gradient(90deg,rgba(7,7,7,0.98)_0%,rgba(7,7,7,0.82)_48%,rgba(7,7,7,0.28)_100%)]" />
 
-          <div className="container-x relative grid min-h-[720px] items-center gap-10 pb-16 lg:grid-cols-[0.85fr_1.15fr] lg:pb-20">
-            <div className="relative z-10 py-8 lg:py-16">
-              <a href="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-[color:var(--orange)]">
-                <ArrowLeft className="h-4 w-4" /> Voltar ao início
-              </a>
-              <span className="eyebrow mt-12 block">Kit Dérig Guide</span>
-              <h1 className="text-display mt-5 text-5xl sm:text-6xl lg:text-7xl">
-                Planejamento digital levado ao campo cirúrgico.
-              </h1>
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                Uma solução Dérig para cirurgias guiadas simplificadas, criada para aumentar a precisão na instalação dos implantes e a qualidade das reabilitações.
-              </p>
-              <div className="mt-9 flex flex-wrap gap-3">
-                <a href="#derig-guide" className="btn-primary">
-                  Conhecer o protocolo <ArrowUpRight className="h-4 w-4" />
-                </a>
-                <a href="/#contato" className="btn-ghost">Falar com um consultor</a>
-              </div>
-            </div>
+          <div className="container-x relative pb-16 lg:pb-20">
+            <a href="/" className="mb-10 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-[color:var(--orange)] lg:mb-12">
+              <ArrowLeft className="h-4 w-4" /> Voltar ao início
+            </a>
 
-            <div className="relative h-[500px] overflow-hidden rounded-[2rem] border border-white/10 bg-black/30 sm:h-[620px] lg:h-[700px]">
-              <img
-                src={heroImplant}
-                alt="Implante dentário Dérig com superfície Biotite"
-                className="h-full w-full object-cover animate-float"
-              />
+            <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
+              <div className="relative z-10 max-w-2xl">
+                <span className="eyebrow block">Kit Dérig Guide</span>
+                <h1 className="text-display mt-5 text-4xl sm:text-5xl lg:text-[3.65rem] xl:text-[4.2rem]">
+                  Planejamento digital levado ao campo cirúrgico.
+                </h1>
+                <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+                  Uma solução Dérig para cirurgias guiadas simplificadas, criada para aumentar a precisão na instalação dos implantes e a qualidade das reabilitações.
+                </p>
+                <div className="mt-9 flex flex-wrap gap-3">
+                  <a href="#derig-guide" className="btn-primary">
+                    Conhecer o protocolo <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                  <a href="/#contato" className="btn-ghost">Falar com um consultor</a>
+                </div>
+              </div>
+
+              <div className="relative mx-auto aspect-square w-full max-w-[720px] overflow-hidden rounded-[2rem] border border-white/10 bg-black/30">
+                <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(255,255,255,0.32)_0%,rgba(255,255,255,0.12)_24%,transparent_62%),radial-gradient(circle_at_82%_58%,rgba(243,122,33,0.12),transparent_46%)]" />
+                <img
+                  src={heroImplant}
+                  alt="Implante dentário Dérig com superfície Biotite"
+                  className="relative h-full w-full object-contain"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -199,7 +203,7 @@ function KitsCirurgicosPage() {
                 <span className="eyebrow">Dérig Guide</span>
                 <h2 className="text-display mt-4 text-3xl md:text-5xl">Uma mudança de paradigma no planejamento da cirurgia.</h2>
               </div>
-              <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+              <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg lg:pt-14">
                 <p>
                   Imagens tridimensionais obtidas por exames de escaneamento e tomografia permitem planejar virtualmente a posição dos implantes e confeccionar o guia cirúrgico antes do procedimento.
                 </p>
