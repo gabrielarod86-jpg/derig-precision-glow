@@ -30,7 +30,13 @@ export function TechnicalLibrary() {
           {docs.map(({ icon: Icon, title, desc }) => (
             <a
               key={title}
-              href={title === "Instruções de uso" ? "/instrucoes-de-uso" : "#contato"}
+              href={
+                title === "Instruções de uso"
+                  ? "/instrucoes-de-uso"
+                  : title === "Guia de torque"
+                    ? "/guia-de-torque"
+                    : "#contato"
+              }
               className="card-premium p-6 flex items-start gap-4 group"
             >
               <div className="h-11 w-11 shrink-0 rounded-xl bg-[color:var(--orange)]/10 ring-1 ring-[color:var(--orange)]/30 flex items-center justify-center">
