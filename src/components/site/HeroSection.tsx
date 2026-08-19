@@ -1,5 +1,5 @@
 import { ArrowRight, Download } from "lucide-react";
-import heroImg from "@/assets/hero-implant.jpg";
+import heroImg from "@/assets/hero-implant-spotlight.png";
 
 const badges = [
   "Tecnologia Biotite",
@@ -61,14 +61,6 @@ export function HeroSection() {
 
         <div className="lg:col-span-5 relative">
           <div className="relative aspect-[3/4] max-w-md mx-auto">
-            <div
-              aria-hidden
-              className="absolute -inset-10 -z-10 rounded-full blur-3xl opacity-70"
-              style={{
-                background:
-                  "radial-gradient(circle, color-mix(in oklab, var(--orange) 45%, transparent), transparent 70%)",
-              }}
-            />
             <img
               src={heroImg}
               alt="Implante dentário Dérig com superfície Biotite"
