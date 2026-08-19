@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ImplantesRouteImport } from './routes/implantes'
+import { Route as InstrucoesDeUsoRouteImport } from './routes/instrucoes-de-uso'
 import { Route as KitsCirurgicosRouteImport } from './routes/kits-cirurgicos'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,6 +24,11 @@ const ImplantesRoute = ImplantesRouteImport.update({
   path: '/implantes',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InstrucoesDeUsoRoute = InstrucoesDeUsoRouteImport.update({
+  id: '/instrucoes-de-uso',
+  path: '/instrucoes-de-uso',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KitsCirurgicosRoute = KitsCirurgicosRouteImport.update({
   id: '/kits-cirurgicos',
   path: '/kits-cirurgicos',
@@ -32,30 +38,35 @@ const KitsCirurgicosRoute = KitsCirurgicosRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/implantes': typeof ImplantesRoute
+  '/instrucoes-de-uso': typeof InstrucoesDeUsoRoute
   '/kits-cirurgicos': typeof KitsCirurgicosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/implantes': typeof ImplantesRoute
+  '/instrucoes-de-uso': typeof InstrucoesDeUsoRoute
   '/kits-cirurgicos': typeof KitsCirurgicosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/implantes': typeof ImplantesRoute
+  '/instrucoes-de-uso': typeof InstrucoesDeUsoRoute
   '/kits-cirurgicos': typeof KitsCirurgicosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/implantes' | '/kits-cirurgicos'
+  fullPaths: '/' | '/implantes' | '/instrucoes-de-uso' | '/kits-cirurgicos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/implantes' | '/kits-cirurgicos'
-  id: '__root__' | '/' | '/implantes' | '/kits-cirurgicos'
+  to: '/' | '/implantes' | '/instrucoes-de-uso' | '/kits-cirurgicos'
+  id:
+    '__root__' | '/' | '/implantes' | '/instrucoes-de-uso' | '/kits-cirurgicos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ImplantesRoute: typeof ImplantesRoute
+  InstrucoesDeUsoRoute: typeof InstrucoesDeUsoRoute
   KitsCirurgicosRoute: typeof KitsCirurgicosRoute
 }
 
@@ -75,6 +86,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ImplantesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/instrucoes-de-uso': {
+      id: '/instrucoes-de-uso'
+      path: '/instrucoes-de-uso'
+      fullPath: '/instrucoes-de-uso'
+      preLoaderRoute: typeof InstrucoesDeUsoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/kits-cirurgicos': {
       id: '/kits-cirurgicos'
       path: '/kits-cirurgicos'
@@ -88,6 +106,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ImplantesRoute: ImplantesRoute,
+  InstrucoesDeUsoRoute: InstrucoesDeUsoRoute,
   KitsCirurgicosRoute: KitsCirurgicosRoute,
 }
 export const routeTree = rootRouteImport
