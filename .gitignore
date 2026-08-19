@@ -19,6 +19,9 @@ dist-ssr
 .node-portable.zip
 .mingit/
 .mingit.zip
+.portablegit/
+.portablegit.exe
+.openai/*.tar.gz
 
 # Wrangler / Cloudflare
 .wrangler/
