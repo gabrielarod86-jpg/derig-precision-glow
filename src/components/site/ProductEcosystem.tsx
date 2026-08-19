@@ -2,9 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import implant from "@/assets/product-conemorse.jpg";
 import kitGuide from "@/assets/kits/kit-derig-guide.png";
 import kitProtetico from "@/assets/kits/kit-protetico.png";
-import drills from "@/assets/product-drills.jpg";
 import components from "@/assets/components-showcase-exact.png";
-import biotite from "@/assets/biotite-surface.jpg";
 import implantsShowcase from "@/assets/implants-showcase-exact.png";
 import backgroundTexture from "@/assets/bg-texture.jpg";
 
@@ -28,16 +26,6 @@ const items = [
     title: "Kit Protético",
     desc: "Instrumentais e acessórios para conduzir o fluxo reabilitador com mais controle.",
     img: kitProtetico,
-  },
-  {
-    title: "Fresas Cirúrgicas",
-    desc: "Desempenho, corte preciso e durabilidade no preparo ósseo.",
-    img: drills,
-  },
-  {
-    title: "Revestimento Biotite",
-    desc: "Tecnologia de superfície desenvolvida para favorecer estabilidade e previsibilidade clínica.",
-    img: biotite,
   },
 ];
 
