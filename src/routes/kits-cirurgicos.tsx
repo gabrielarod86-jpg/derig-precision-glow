@@ -16,6 +16,7 @@ import { Header } from "@/components/site/Header";
 import { ContactCTA } from "@/components/site/ContactCTA";
 import { Footer } from "@/components/site/Footer";
 import { MobileCTA } from "@/components/site/MobileCTA";
+import heroImplant from "@/assets/hero-implant-spotlight-v2.png";
 import guideImage from "@/assets/kits/kit-derig-guide.png";
 import conicoImage from "@/assets/kits/kit-cirurgico-conico.png";
 import cilindricoImage from "@/assets/kits/kit-cirurgico-cilindrico.png";
@@ -183,9 +184,9 @@ function KitsCirurgicosPage() {
 
             <div className="relative h-[500px] overflow-hidden rounded-[2rem] border border-white/10 bg-black/30 sm:h-[620px] lg:h-[700px]">
               <img
-                src={guideImage}
-                alt="Kit Dérig Guide completo para cirurgia guiada"
-                className="h-full w-full object-contain"
+                src={heroImplant}
+                alt="Implante dentário Dérig com superfície Biotite"
+                className="h-full w-full object-cover animate-float"
               />
             </div>
           </div>
