@@ -67,6 +67,12 @@ export function HeroSection() {
               width={1600}
               height={1600}
               className="relative w-full h-full object-cover rounded-3xl animate-float"
+              style={{
+                WebkitMaskImage:
+                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.22) 5%, rgba(0,0,0,0.88) 15%, #000 24%)",
+                maskImage:
+                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.22) 5%, rgba(0,0,0,0.88) 15%, #000 24%)",
+              }}
             />
           </div>
         </div>
