@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ArtigosRouteImport } from './routes/artigos'
 import { Route as CasosClinicosRouteImport } from './routes/casos-clinicos'
 import { Route as GuiaDeTorqueRouteImport } from './routes/guia-de-torque'
 import { Route as ImplantesRouteImport } from './routes/implantes'
@@ -19,6 +20,11 @@ import { Route as KitsCirurgicosRouteImport } from './routes/kits-cirurgicos'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArtigosRoute = ArtigosRouteImport.update({
+  id: '/artigos',
+  path: '/artigos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CasosClinicosRoute = CasosClinicosRouteImport.update({
@@ -49,6 +55,7 @@ const KitsCirurgicosRoute = KitsCirurgicosRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/artigos': typeof ArtigosRoute
   '/casos-clinicos': typeof CasosClinicosRoute
   '/guia-de-torque': typeof GuiaDeTorqueRoute
   '/implantes': typeof ImplantesRoute
@@ -57,6 +64,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/artigos': typeof ArtigosRoute
   '/casos-clinicos': typeof CasosClinicosRoute
   '/guia-de-torque': typeof GuiaDeTorqueRoute
   '/implantes': typeof ImplantesRoute
@@ -66,6 +74,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/artigos': typeof ArtigosRoute
   '/casos-clinicos': typeof CasosClinicosRoute
   '/guia-de-torque': typeof GuiaDeTorqueRoute
   '/implantes': typeof ImplantesRoute
@@ -76,6 +85,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/artigos'
     | '/casos-clinicos'
     | '/guia-de-torque'
     | '/implantes'
@@ -84,6 +94,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/artigos'
     | '/casos-clinicos'
     | '/guia-de-torque'
     | '/implantes'
@@ -92,6 +103,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/artigos'
     | '/casos-clinicos'
     | '/guia-de-torque'
     | '/implantes'
@@ -101,6 +113,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ArtigosRoute: typeof ArtigosRoute
   CasosClinicosRoute: typeof CasosClinicosRoute
   GuiaDeTorqueRoute: typeof GuiaDeTorqueRoute
   ImplantesRoute: typeof ImplantesRoute
@@ -115,6 +128,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/artigos': {
+      id: '/artigos'
+      path: '/artigos'
+      fullPath: '/artigos'
+      preLoaderRoute: typeof ArtigosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/casos-clinicos': {
@@ -157,6 +177,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ArtigosRoute: ArtigosRoute,
   CasosClinicosRoute: CasosClinicosRoute,
   GuiaDeTorqueRoute: GuiaDeTorqueRoute,
   ImplantesRoute: ImplantesRoute,

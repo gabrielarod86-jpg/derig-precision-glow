@@ -37,7 +37,9 @@ export function TechnicalLibrary() {
                     ? "/guia-de-torque"
                     : title === "Casos clínicos"
                       ? "/casos-clinicos"
-                      : "#contato"
+                      : title === "Materiais científicos"
+                        ? "/artigos"
+                        : "#contato"
               }
               className="card-premium p-6 flex items-start gap-4 group"
             >
