@@ -91,7 +91,7 @@ function ClinicalCasesPage() {
 
             <aside className="card-premium overflow-hidden">
               <img
-                src={`${assetRoot}/mario-groisman.jpg`}
+                src={`${assetRoot}/mario-groisman.png`}
                 alt="Dr. Mario Groisman"
                 className="h-auto w-full"
               />
