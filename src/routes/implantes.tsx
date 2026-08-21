@@ -15,7 +15,7 @@ import { ContactCTA } from "@/components/site/ContactCTA";
 import { Footer } from "@/components/site/Footer";
 import { MobileCTA } from "@/components/site/MobileCTA";
 import backgroundTexture from "@/assets/bg-texture.jpg";
-import implantsShowcase from "@/assets/implants-showcase-exact.png";
+import implantsShowcase from "@/assets/derig-implantes-4k.png";
 import zigomaticImplant from "@/assets/implante-zigomatico-cm16.png";
 import bioneckCmhImage from "@/assets/implants/bioneck-cmh.png";
 import bioneckTriImage from "@/assets/implants/bioneck-tri.png";
