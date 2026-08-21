@@ -3,7 +3,7 @@ import implant from "@/assets/product-conemorse.jpg";
 import kitGuide from "@/assets/kits/kit-derig-guide.png";
 import kitProtetico from "@/assets/kits/kit-protetico.png";
 import components from "@/assets/components-showcase-exact.png";
-import implantsShowcase from "@/assets/implants-showcase-exact.png";
+import implantsShowcase from "@/assets/derig-implantes-4k.png";
 import backgroundTexture from "@/assets/bg-texture.jpg";
 
 const items = [
@@ -76,6 +76,12 @@ function ImplantFeature() {
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover opacity-45"
       />
+      <img
+        src={implantsShowcase}
+        alt="Família de implantes dentários Dérig"
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover object-center"
+      />
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,3,3,0.98)_0%,rgba(3,3,3,0.90)_38%,rgba(3,3,3,0.28)_72%,rgba(3,3,3,0.72)_100%)]"
@@ -84,15 +90,6 @@ function ImplantFeature() {
         aria-hidden="true"
         className="absolute bottom-[-12%] right-[-2%] h-[92%] w-[72%] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.13)_0%,rgba(255,255,255,0.03)_42%,transparent_72%)] blur-2xl"
       />
-
-      <div className="absolute inset-x-2 bottom-3 h-[390px] sm:inset-x-4 sm:bottom-4 sm:h-[410px] md:inset-y-5 md:left-auto md:right-4 md:h-auto md:w-[68%]">
-        <img
-          src={implantsShowcase}
-          alt="Família de implantes dentários Dérig, incluindo implante zigomático"
-          loading="lazy"
-          className="h-full w-full object-contain object-bottom drop-shadow-[0_28px_45px_rgba(0,0,0,0.72)]"
-        />
-      </div>
 
       <div className="relative z-10 flex min-h-[720px] items-start p-7 sm:min-h-[660px] sm:p-10 md:min-h-[520px] md:items-center md:p-12">
         <div className="max-w-sm">
