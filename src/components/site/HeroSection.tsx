@@ -68,7 +68,6 @@ export function HeroSection() {
               height={1600}
               className="relative w-full h-full object-cover rounded-3xl animate-float"
             />
-            <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/5" />
           </div>
         </div>
       </div>
