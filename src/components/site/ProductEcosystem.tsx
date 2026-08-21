@@ -2,7 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import implant from "@/assets/product-conemorse.jpg";
 import kitGuide from "@/assets/kits/kit-derig-guide.png";
 import kitProtetico from "@/assets/kits/kit-protetico.png";
-import components from "@/assets/components-showcase-exact.png";
+import components from "@/assets/components-portfolio-2026.png";
 import implantsShowcase from "@/assets/derig-implantes-4k.png";
 import backgroundTexture from "@/assets/bg-texture.jpg";
 

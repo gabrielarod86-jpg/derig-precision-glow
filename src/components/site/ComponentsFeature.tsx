@@ -1,5 +1,5 @@
 import { ArrowUpRight, Boxes, ScanLine, Waypoints } from "lucide-react";
-import componentsShowcase from "@/assets/components-showcase-exact.png";
+import componentsShowcase from "@/assets/components-portfolio-2026.png";
 import backgroundTexture from "@/assets/bg-texture.jpg";
 
 const componentGroups = [
