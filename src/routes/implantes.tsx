@@ -440,7 +440,7 @@ function ImplantsPage() {
 
         <section id="zigomatico" className="border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/35 py-24 md:py-32">
           <div className="container-x">
-            <div className="grid items-center gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20">
+            <div className="grid items-start gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20">
               <div>
                 <span className="eyebrow">Implante especializado</span>
                 <h2 className="text-display mt-4 text-4xl md:text-6xl">Implante Zigomático CM16.</h2>
@@ -453,6 +453,18 @@ function ImplantsPage() {
                   <Spec icon={Microscope} label="Material" value="Titânio puro grau 4" />
                   <Spec icon={Stethoscope} label="Componentes" value="Pilar angulado 45° CM16" />
                 </div>
+
+                <article className="card-premium mt-6 p-7 md:p-9">
+                  <span className="eyebrow">Indicação de uso</span>
+                  <h3 className="text-display mt-4 text-2xl md:text-3xl">Reabilitações totais em maxilas severamente reabsorvidas.</h3>
+                  <p className="mt-5 text-sm leading-relaxed text-muted-foreground md:text-base">
+                    Indicado para instalação posterior na maxila e ancoragem no osso zigomático quando não é possível instalar implantes convencionais. Em conjunto com outros implantes, oferece suporte à prótese total e não deve ser utilizado em reabilitação unitária.
+                  </p>
+                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
+                    A carga imediata somente é indicada quando o paciente apresenta oclusão fisiológica e o implante atinge torque mínimo de 35 Ncm.
+                  </p>
+                </article>
+
               </div>
               <div className="relative min-h-[660px] overflow-hidden rounded-[2rem] border border-white/10 bg-black">
                 <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(255,255,255,0.17),transparent_48%),radial-gradient(circle_at_75%_70%,rgba(243,122,33,0.12),transparent_44%)]" />
@@ -465,35 +477,22 @@ function ImplantsPage() {
               </div>
             </div>
 
-            <div className="mt-12 grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
-              <article className="card-premium p-7 md:p-9">
-                <span className="eyebrow">Indicação de uso</span>
-                <h3 className="text-display mt-4 text-2xl md:text-3xl">Reabilitações totais em maxilas severamente reabsorvidas.</h3>
-                <p className="mt-5 text-sm leading-relaxed text-muted-foreground md:text-base">
-                  Indicado para instalação posterior na maxila e ancoragem no osso zigomático quando não é possível instalar implantes convencionais. Em conjunto com outros implantes, oferece suporte à prótese total e não deve ser utilizado em reabilitação unitária.
-                </p>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-                  A carga imediata somente é indicada quando o paciente apresenta oclusão fisiológica e o implante atinge torque mínimo de 35 Ncm.
-                </p>
-              </article>
+            <article className="card-premium mt-12 overflow-hidden">
+              <div className="border-b border-white/10 p-7 md:p-9">
+                <span className="eyebrow">Dimensões disponíveis</span>
+                <h3 className="text-display mt-4 text-2xl md:text-3xl">14 comprimentos, de 30 a 62,5 mm.</h3>
+              </div>
+              <div className="grid grid-cols-2 gap-px bg-white/10 sm:grid-cols-3 lg:grid-cols-7">
+                {zigomaticLengths.map((length, index) => (
+                  <div key={length} className="bg-[color:var(--card)] p-4 md:p-5">
+                    <p className="text-base font-semibold">{length} mm</p>
+                    <p className="mt-1 text-xs text-muted-foreground">Ref. 02.33.36.{String(index + 301)}</p>
+                  </div>
+                ))}
+              </div>
+            </article>
 
-              <article className="card-premium overflow-hidden">
-                <div className="border-b border-white/10 p-7 md:p-9">
-                  <span className="eyebrow">Dimensões disponíveis</span>
-                  <h3 className="text-display mt-4 text-2xl md:text-3xl">14 comprimentos, de 30 a 62,5 mm.</h3>
-                </div>
-                <div className="grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
-                  {zigomaticLengths.map((length, index) => (
-                    <div key={length} className="bg-[color:var(--card)] p-5">
-                      <p className="text-base font-semibold">{length} mm</p>
-                      <p className="mt-1 text-xs text-muted-foreground">Ref. 02.33.36.{String(index + 301)}</p>
-                    </div>
-                  ))}
-                </div>
-              </article>
-            </div>
-
-            <div className="mt-6 card-premium p-7 md:p-9">
+            <div className="mt-12 card-premium p-7 md:p-9">
               <span className="eyebrow">Sequência de perfuração</span>
               <h3 className="text-display mt-4 text-2xl md:text-3xl">Protocolo do Implante Zigomático CM16.</h3>
               <ol className="mt-8 grid gap-4 md:grid-cols-5">
