@@ -75,11 +75,6 @@ function ClinicalCasesPage() {
               <h1 className="mt-5 max-w-4xl text-4xl font-semibold tracking-[-0.045em] sm:text-5xl md:text-7xl">
                 Casos clínicos
               </h1>
-              <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-                Registros clínicos organizados no template Dérig, com as fotografias científicas
-                originais preservadas integralmente.
-              </p>
-
               <div className="mt-8 flex flex-wrap gap-3">
                 {clinicalCases.map((clinicalCase) => (
                   <a key={clinicalCase.slug} href={`#${clinicalCase.slug}`} className="btn-ghost">
