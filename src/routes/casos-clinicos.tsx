@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, ArrowUpRight, ChevronDown, Images } from "lucide-react";
+import { ArrowLeft, ArrowRight, ChevronDown, Images } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { MobileCTA } from "@/components/site/MobileCTA";
@@ -111,18 +111,7 @@ function ClinicalCasesPage() {
         </section>
 
         <section className="container-x mt-16 md:mt-24">
-          <div className="max-w-3xl">
-            <span className="eyebrow">Documentação clínica</span>
-            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl md:text-5xl">
-              Selecione um caso para consultar.
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-              Cada galeria segue a ordem original do material científico. Clique em uma fotografia
-              para abri-la em sua resolução completa.
-            </p>
-          </div>
-
-          <div className="mt-10 space-y-8">
+          <div className="space-y-8">
             {clinicalCases.map((clinicalCase) => {
               const images = Array.from({ length: clinicalCase.imageCount }, (_, index) =>
                 imagePath(clinicalCase.slug, index + 1, clinicalCase.extension),
@@ -146,15 +135,6 @@ function ClinicalCasesPage() {
                       <p className="mt-4 leading-relaxed text-muted-foreground">
                         {clinicalCase.description}
                       </p>
-                      <a
-                        href={clinicalCase.source}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--orange)] transition-opacity hover:opacity-75"
-                      >
-                        Consultar fonte original
-                        <ArrowUpRight className="h-4 w-4" />
-                      </a>
                     </div>
 
                     <div className="border-t border-[color:var(--hairline)] bg-black/25 p-4 lg:border-l lg:border-t-0 lg:p-6">
