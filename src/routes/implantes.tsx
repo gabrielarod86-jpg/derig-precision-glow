@@ -440,7 +440,7 @@ function ImplantsPage() {
 
         <section id="zigomatico" className="border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/35 py-24 md:py-32">
           <div className="container-x">
-            <div className="grid items-start gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20">
+            <div className="grid items-stretch gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20">
               <div>
                 <span className="eyebrow">Implante especializado</span>
                 <h2 className="text-display mt-4 text-4xl md:text-6xl">Implante Zigomático CM16.</h2>
@@ -466,13 +466,13 @@ function ImplantsPage() {
                 </article>
 
               </div>
-              <div className="relative min-h-[580px] overflow-hidden rounded-[2rem] border border-white/10 bg-black">
+              <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-white/10 bg-black lg:min-h-0">
                 <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(255,255,255,0.17),transparent_48%),radial-gradient(circle_at_75%_70%,rgba(243,122,33,0.12),transparent_44%)]" />
                 <img
                   src={zigomaticImplant}
                   alt="Implante Zigomático Dérig CM16"
                   loading="lazy"
-                  className="relative h-full min-h-[580px] w-full object-contain p-8 drop-shadow-[0_30px_35px_rgba(0,0,0,0.7)]"
+                  className="relative h-full min-h-[520px] w-full object-contain p-8 drop-shadow-[0_30px_35px_rgba(0,0,0,0.7)] lg:min-h-0"
                 />
               </div>
             </div>
