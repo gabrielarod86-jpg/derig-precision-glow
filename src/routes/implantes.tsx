@@ -466,13 +466,13 @@ function ImplantsPage() {
                 </article>
 
               </div>
-              <div className="relative min-h-[660px] overflow-hidden rounded-[2rem] border border-white/10 bg-black">
+              <div className="relative min-h-[580px] overflow-hidden rounded-[2rem] border border-white/10 bg-black">
                 <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(255,255,255,0.17),transparent_48%),radial-gradient(circle_at_75%_70%,rgba(243,122,33,0.12),transparent_44%)]" />
                 <img
                   src={zigomaticImplant}
                   alt="Implante Zigomático Dérig CM16"
                   loading="lazy"
-                  className="relative h-full min-h-[660px] w-full object-contain p-8 drop-shadow-[0_30px_35px_rgba(0,0,0,0.7)]"
+                  className="relative h-full min-h-[580px] w-full object-contain p-8 drop-shadow-[0_30px_35px_rgba(0,0,0,0.7)]"
                 />
               </div>
             </div>
