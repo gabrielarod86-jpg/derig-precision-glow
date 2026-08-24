@@ -155,12 +155,6 @@ const implantLines: ImplantLine[] = [
         codes: "02.04.16.005 / 006 / 054 / 007 / 008",
         components: "TRI RP-UP",
       },
-      {
-        diameter: "Ø 5,0 mm",
-        lengths: "8 / 10 / 11,5 / 13 / 16 mm",
-        codes: "02.04.16.025 / 026 / 055 / 027 / 028",
-        components: "TRI RP-UP",
-      },
     ],
   },
   {
@@ -187,12 +181,6 @@ const implantLines: ImplantLine[] = [
         diameter: "Ø 3,75 mm",
         lengths: "8,5 / 10 / 11,5 / 13 / 15 mm",
         codes: "02.03.16.006 a 02.03.16.010",
-        components: "HEX RP-UP",
-      },
-      {
-        diameter: "Ø 5,0 mm",
-        lengths: "8,5 / 10 / 11,5 / 13 / 15 mm",
-        codes: "02.03.16.036 a 02.03.16.040",
         components: "HEX RP-UP",
       },
     ],

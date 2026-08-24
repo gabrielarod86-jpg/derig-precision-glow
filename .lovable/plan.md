@@ -20,8 +20,8 @@ Cada página com `head()` próprio (title, description, og:title, og:description
 
 Fichas com o texto enviado, na íntegra:
 
-- **Bioneck TRI — Triplo Canal Interno**: alto poder de compactação, sulcos retentivos nas roscas, Ø 3,5 / 4,3 / 5,0 mm, superfície Biotite (duplo ataque ácido), acompanha parafuso de cobertura.
-- **Biodent HEX — Hexágono Externo**: alto poder de expansão óssea, sulcos retentivos, instalação com menos trauma, Ø 3,3 / 3,75 / 5,0 mm, Biotite, parafuso de cobertura.
+- **Bioneck TRI — Triplo Canal Interno**: alto poder de compactação, sulcos retentivos nas roscas, Ø 3,5 / 4,3 mm, superfície Biotite (duplo ataque ácido), acompanha parafuso de cobertura.
+- **Biodent HEX — Hexágono Externo**: alto poder de expansão óssea, sulcos retentivos, instalação com menos trauma, Ø 3,3 / 3,75 mm, Biotite, parafuso de cobertura.
 - **Kort HEX — Hexágono Externo (curto)**: macrogeometria cilíndrica levemente cônica na porção apical, plataforma reduzida (swifting), Ø 4 e 5 mm, Biotite, parafuso de cobertura.
 
 Cada ficha exibe: conexão, diâmetros disponíveis, superfície, itens inclusos e CTA "Fale com um consultor".
