@@ -248,7 +248,8 @@ const qualitySteps = [
 const surgicalProtocols = [
   {
     name: "Bioneck CMH e Bioneck TRI",
-    sequence: "Lança Ø 2,0 → brocas cônicas Ø 3,5 / 4,3 / 5,0 → macho de rosca quando indicado pela densidade óssea.",
+    sequence: "Lança Ø 2,0 → brocas cônicas Ø 3,5 / 4,3 → macho de rosca quando indicado pela densidade óssea.",
+    note: "Observação: as brocas Ø 5,0 podem ser adquiridas separadamente.",
   },
   {
     name: "Dynamic CMH e Biodent HEX",
@@ -409,6 +410,9 @@ function ImplantsPage() {
                       <div>
                         <h3 className="font-semibold">{protocol.name}</h3>
                         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{protocol.sequence}</p>
+                        {protocol.note && (
+                          <p className="mt-3 text-xs leading-relaxed text-[color:var(--orange)]">{protocol.note}</p>
+                        )}
                       </div>
                     </div>
                   </article>
