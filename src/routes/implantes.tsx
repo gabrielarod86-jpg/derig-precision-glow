@@ -172,12 +172,6 @@ const implantLines: ImplantLine[] = [
     ],
     options: [
       {
-        diameter: "Ø 3,3 mm",
-        lengths: "8,5 / 10 / 11,5 / 13 / 15 mm",
-        codes: "02.03.16.026 a 02.03.16.030",
-        components: "HEX NP",
-      },
-      {
         diameter: "Ø 3,75 mm",
         lengths: "8,5 / 10 / 11,5 / 13 / 15 mm",
         codes: "02.03.16.006 a 02.03.16.010",
