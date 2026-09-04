@@ -1,5 +1,5 @@
 import { ArrowRight, Download } from "lucide-react";
-import heroImg from "@/assets/hero-implant-spotlight-v2.png";
+import heroImg from "@/assets/implants/dynamic-4.3x13-sandblasted.png";
 
 const badges = [
   "Tecnologia Biotite",
@@ -60,18 +60,36 @@ export function HeroSection() {
         </div>
 
         <div className="lg:col-span-5 relative">
-          <div className="relative aspect-[3/4] max-w-md mx-auto">
+          <div className="relative isolate aspect-[3/4] max-w-md mx-auto">
+            <div
+              aria-hidden
+              className="absolute inset-[8%] -z-10 rounded-full blur-3xl"
+              style={{
+                background:
+                  "radial-gradient(ellipse at 50% 28%, rgba(255,255,255,0.22) 0%, rgba(243,122,33,0.15) 30%, rgba(243,122,33,0.04) 54%, transparent 74%)",
+              }}
+            />
+            <div
+              aria-hidden
+              className="absolute left-[9%] top-[17%] -z-10 h-[58%] w-[82%] rounded-full opacity-80 blur-2xl"
+              style={{
+                background:
+                  "radial-gradient(ellipse, rgba(243,122,33,0.22) 0%, rgba(243,122,33,0.05) 46%, transparent 72%)",
+              }}
+            />
             <img
               src={heroImg}
-              alt="Implante dentário Dérig com superfície Biotite"
-              width={1600}
-              height={1600}
-              className="relative w-full h-full object-cover rounded-3xl animate-float"
+              alt="Implante dentário Dynamic Dérig 4,3 x 13 mm"
+              width={828}
+              height={1900}
+              className="relative h-full w-full object-contain object-center animate-float"
               style={{
+                filter:
+                  "brightness(0.82) contrast(1.16) drop-shadow(0 28px 30px rgba(0,0,0,0.75)) drop-shadow(0 0 16px rgba(243,122,33,0.2))",
                 WebkitMaskImage:
-                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.22) 5%, rgba(0,0,0,0.88) 15%, #000 24%)",
+                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.82) 7%, #000 15%, #000 92%, transparent 100%)",
                 maskImage:
-                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.22) 5%, rgba(0,0,0,0.88) 15%, #000 24%)",
+                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.82) 7%, #000 15%, #000 92%, transparent 100%)",
               }}
             />
           </div>
