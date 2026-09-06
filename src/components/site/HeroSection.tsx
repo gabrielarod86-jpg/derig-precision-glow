@@ -1,5 +1,13 @@
 import { ArrowRight, Download } from "lucide-react";
-import heroImg from "@/assets/implants/dynamic-4.3x13-sandblasted.png";
+import heroAsset from "@/assets/implants/dynamic-hero.png.asset.json";
+
+const heroImg = heroAsset.url;
+
+const callouts = [
+  { top: "16%", label: "Conexão interna", value: "Cone Morse" },
+  { top: "47%", label: "Espiras progressivas", value: "Alta estabilidade" },
+  { top: "78%", label: "Superfície Biotite", value: "Osseointegração" },
+];
 
 const badges = [
   "Tecnologia Biotite",
