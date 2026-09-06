@@ -110,8 +110,8 @@ export function HeroSection() {
             <img
               src={heroImg}
               alt="Implante dentário Dynamic Dérig 4,3 x 13 mm"
-              width={828}
-              height={1900}
+              width={516}
+              height={1768}
               className="relative h-full w-full object-contain object-center animate-float"
               style={{
                 filter:
