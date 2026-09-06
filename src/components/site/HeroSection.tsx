@@ -69,22 +69,44 @@ export function HeroSection() {
 
         <div className="lg:col-span-5 relative">
           <div className="relative isolate aspect-[3/4] max-w-md mx-auto">
+            {/* halo principal */}
             <div
               aria-hidden
-              className="absolute inset-[8%] -z-10 rounded-full blur-3xl"
+              className="absolute inset-[6%] -z-10 rounded-full blur-3xl animate-pulse-ring"
               style={{
                 background:
-                  "radial-gradient(ellipse at 50% 28%, rgba(255,255,255,0.22) 0%, rgba(243,122,33,0.15) 30%, rgba(243,122,33,0.04) 54%, transparent 74%)",
+                  "radial-gradient(ellipse at 50% 30%, rgba(255,255,255,0.20) 0%, rgba(243,122,33,0.18) 32%, rgba(243,122,33,0.04) 56%, transparent 76%)",
               }}
+            />
+
+            {/* anéis técnicos girando */}
+            <div
+              aria-hidden
+              className="absolute left-1/2 top-1/2 -z-10 h-[86%] w-[86%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[color:var(--orange)]/25 animate-spin-slow"
             />
             <div
               aria-hidden
-              className="absolute left-[9%] top-[17%] -z-10 h-[58%] w-[82%] rounded-full opacity-80 blur-2xl"
+              className="absolute left-1/2 top-1/2 -z-10 h-[64%] w-[64%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[color:var(--orange)]/15 animate-spin-slow-rev"
+            >
+              <span className="absolute -top-[3px] left-1/2 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-[color:var(--orange)] shadow-[0_0_12px_rgba(243,122,33,0.9)]" />
+            </div>
+
+            {/* malha técnica sutil */}
+            <div
+              aria-hidden
+              className="absolute inset-0 -z-10 opacity-[0.10]"
               style={{
-                background:
-                  "radial-gradient(ellipse, rgba(243,122,33,0.22) 0%, rgba(243,122,33,0.05) 46%, transparent 72%)",
+                backgroundImage:
+                  "linear-gradient(to right, rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.5) 1px, transparent 1px)",
+                backgroundSize: "38px 38px",
+                WebkitMaskImage:
+                  "radial-gradient(circle at 50% 45%, #000 0%, transparent 70%)",
+                maskImage:
+                  "radial-gradient(circle at 50% 45%, #000 0%, transparent 70%)",
               }}
             />
+
+            {/* implante — geometria e superfície preservadas */}
             <img
               src={heroImg}
               alt="Implante dentário Dynamic Dérig 4,3 x 13 mm"
@@ -93,13 +115,73 @@ export function HeroSection() {
               className="relative h-full w-full object-contain object-center animate-float"
               style={{
                 filter:
-                  "brightness(0.82) contrast(1.16) drop-shadow(0 28px 30px rgba(0,0,0,0.75)) drop-shadow(0 0 16px rgba(243,122,33,0.2))",
+                  "drop-shadow(0 30px 34px rgba(0,0,0,0.78)) drop-shadow(0 0 22px rgba(243,122,33,0.22))",
                 WebkitMaskImage:
-                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.82) 7%, #000 15%, #000 92%, transparent 100%)",
+                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.82) 6%, #000 14%, #000 93%, transparent 100%)",
                 maskImage:
-                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.82) 7%, #000 15%, #000 92%, transparent 100%)",
+                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.82) 6%, #000 14%, #000 93%, transparent 100%)",
               }}
             />
+
+            {/* varredura de luz */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-x-[10%] top-0 h-[22%] animate-scan"
+              style={{
+                background:
+                  "linear-gradient(to bottom, transparent, rgba(255,255,255,0.10) 45%, rgba(243,122,33,0.16) 60%, transparent)",
+                filter: "blur(6px)",
+              }}
+            />
+
+            {/* reflexo na base */}
+            <div
+              aria-hidden
+              className="absolute -bottom-2 left-1/2 h-6 w-[52%] -translate-x-1/2 rounded-[100%] blur-xl"
+              style={{
+                background:
+                  "radial-gradient(ellipse, rgba(243,122,33,0.35) 0%, transparent 70%)",
+              }}
+            />
+
+            {/* legendas técnicas */}
+            {callouts.map((c, i) => (
+              <div
+                key={c.label}
+                className="hidden md:flex absolute items-center gap-2 animate-fade-up"
+                style={{
+                  top: c.top,
+                  [i === 1 ? "left" : "right"]: "-6%",
+                  animationDelay: `${0.5 + i * 0.15}s`,
+                }}
+              >
+                {i === 1 && (
+                  <span className="h-px w-8 bg-gradient-to-r from-transparent to-[color:var(--orange)]/60" />
+                )}
+                <div className="rounded-lg border border-[color:var(--hairline)] bg-background/60 px-3 py-2 backdrop-blur-md">
+                  <p className="text-[10px] uppercase tracking-[0.14em] text-[color:var(--orange)]">
+                    {c.label}
+                  </p>
+                  <p className="text-xs text-foreground/85">{c.value}</p>
+                </div>
+                {i !== 1 && (
+                  <span className="h-px w-8 bg-gradient-to-l from-transparent to-[color:var(--orange)]/60" />
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 flex items-center justify-center gap-6 text-center">
+            {[
+              { k: "Ø 4,3 mm", v: "Diâmetro" },
+              { k: "13 mm", v: "Comprimento" },
+              { k: "Biotite", v: "Superfície" },
+            ].map((s) => (
+              <div key={s.k}>
+                <p className="text-sm font-semibold text-foreground">{s.k}</p>
+                <p className="text-[11px] text-muted-foreground">{s.v}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
