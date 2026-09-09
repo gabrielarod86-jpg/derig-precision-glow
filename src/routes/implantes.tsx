@@ -61,6 +61,7 @@ type ImplantLine = {
   description: string;
   image: string;
   imageMode?: "cover" | "contain";
+  visualLengthMm: number;
   features: string[];
   options: ImplantOption[];
 };
@@ -73,6 +74,7 @@ const implantLines: ImplantLine[] = [
       "Implante cônico com interface interna única para todos os diâmetros e macrogeometria desenvolvida para ampliar estabilidade e contato ósseo.",
     image: bioneckCmhImage,
     imageMode: "contain",
+    visualLengthMm: 16,
     features: [
       "Uma única interface interna cone morse para todos os diâmetros",
       "Sulcos retentivos nas roscas para maior área de contato e estabilidade primária",
@@ -101,6 +103,7 @@ const implantLines: ImplantLine[] = [
       "Núcleo cônico e espiras largas com câmaras cortantes que possibilitam expansão e compressão óssea simultaneamente.",
     image: dynamicCmhImage,
     imageMode: "contain",
+    visualLengthMm: 16,
     features: [
       "Uma única interface interna cone morse para todos os diâmetros",
       "Espiras largas e câmaras cortantes",
@@ -135,6 +138,7 @@ const implantLines: ImplantLine[] = [
       "Implante cônico com triplo canal interno, microcanais cervicais e sistema mecânico de captura com identificação visual.",
     image: bioneckTriImage,
     imageMode: "contain",
+    visualLengthMm: 16,
     features: [
       "Macrogeometria com alta estabilidade primária",
       "Torque interno com sistema de captura e inserção",
@@ -163,6 +167,7 @@ const implantLines: ImplantLine[] = [
       "Implante cilíndrico levemente cônico na porção apical, com dupla rosca e câmaras de alta capacidade de corte.",
     image: biodentHexImage,
     imageMode: "contain",
+    visualLengthMm: 16,
     features: [
       "Interface externa hexagonal",
       "Dupla rosca para agilizar a inserção e minimizar traumas",
@@ -185,6 +190,7 @@ const implantLines: ImplantLine[] = [
       "Implante curto com macrogeometria cilíndrica, porção apical levemente cônica e compatibilidade com a linha protética Biodent HEX.",
     image: kortHexImage,
     imageMode: "contain",
+    visualLengthMm: 7,
     features: [
       "Comprimentos reduzidos de 5,5 e 7 mm",
       "Dupla rosca e câmaras cortantes na região apical",
@@ -213,6 +219,7 @@ const implantLines: ImplantLine[] = [
       "Implante de corpo longo para ancoragem no osso zigomático em reabilitações totais de maxilas severamente reabsorvidas.",
     image: zigomaticImplant,
     imageMode: "contain",
+    visualLengthMm: 52.5,
     features: [
       "Corpo longo em titânio comercialmente puro grau 4",
       "Ápice cônico com ponta arredondada e três câmaras de corte helicoidais",
@@ -414,9 +421,14 @@ function ImplantsPage() {
                 Todas as linhas apresentam superfície Biotite, com microporosidade obtida por duplo
                 ataque ácido.
               </p>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground/80">
+                Comparação em uma mesma escala visual: implantes convencionais com referência de 16
+                mm, Kort com 7 mm e Zigomático com 52,5 mm. A geometria e a textura de superfície das
+                imagens foram preservadas.
+              </p>
             </div>
 
-            <div className="mt-12 grid gap-6 xl:grid-cols-2">
+            <div className="mt-12 grid items-stretch gap-6 xl:grid-cols-2">
               {implantLines.map((line) => (
                 <ImplantLineCard key={line.name} line={line} />
               ))}
@@ -667,10 +679,14 @@ function ImplantsPage() {
 }
 
 function ImplantLineCard({ line }: { line: ImplantLine }) {
+  const visualLengthLabel = line.visualLengthMm.toLocaleString("pt-BR", {
+    maximumFractionDigits: 1,
+  });
+
   return (
     <article className="card-premium flex h-full flex-col overflow-hidden">
-      <div className="grid sm:grid-cols-[0.42fr_0.58fr]">
-        <div className="relative h-[28rem] overflow-hidden bg-black sm:h-[34rem]">
+      <div className="grid sm:grid-cols-[0.42fr_0.58fr] sm:items-stretch">
+        <div className="relative flex h-[36rem] items-start justify-center overflow-hidden bg-black px-8 pt-7">
           <div
             aria-hidden="true"
             className="absolute inset-0 bg-[radial-gradient(circle_at_50%_58%,rgba(243,122,33,0.13),transparent_62%)]"
@@ -679,10 +695,19 @@ function ImplantLineCard({ line }: { line: ImplantLine }) {
             src={line.image}
             alt={line.name}
             loading="lazy"
-            className={`absolute inset-0 h-full w-full object-bottom p-6 sm:p-8 ${line.imageMode === "cover" ? "object-cover" : "object-contain"}`}
+            draggable={false}
+            className={`relative z-10 w-auto max-w-none select-none object-top drop-shadow-[0_24px_30px_rgba(0,0,0,0.72)] ${line.imageMode === "cover" ? "object-cover" : "object-contain"}`}
+            style={{
+              height: `${line.visualLengthMm * 9}px`,
+              maxHeight: "calc(100% - 5.5rem)",
+            }}
           />
+          <div className="absolute inset-x-5 bottom-5 z-20 flex items-center justify-between gap-3 border-t border-white/10 pt-4 text-[11px] uppercase tracking-[0.14em] text-muted-foreground">
+            <span>Referência visual</span>
+            <strong className="text-[color:var(--orange)]">{visualLengthLabel} mm</strong>
+          </div>
         </div>
-        <div className="p-6 sm:min-h-[34rem] md:p-7">
+        <div className="p-6 sm:h-[36rem] md:p-7">
           <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[color:var(--orange)]">
             {line.interface}
           </span>
@@ -698,7 +723,7 @@ function ImplantLineCard({ line }: { line: ImplantLine }) {
           </ul>
         </div>
       </div>
-      <div className="overflow-x-auto border-t border-white/10">
+      <div className="mt-auto overflow-x-auto border-t border-white/10">
         <table className="w-full min-w-[680px] text-left text-xs">
           <thead className="bg-white/[0.035] text-foreground/80">
             <tr>
