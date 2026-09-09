@@ -16,12 +16,12 @@ import { Footer } from "@/components/site/Footer";
 import { MobileCTA } from "@/components/site/MobileCTA";
 import backgroundTexture from "@/assets/bg-texture.jpg";
 import implantsShowcase from "@/assets/derig-implantes-4k.png";
-import zigomaticImplant from "@/assets/implante-zigomatico-cm16.png";
-import bioneckCmhImage from "@/assets/implants/bioneck-cmh.png";
-import bioneckTriImage from "@/assets/implants/bioneck-tri.png";
-import dynamicCmhImage from "@/assets/implants/dynamic-cmh.png";
-import kortHexImage from "@/assets/implants/kort-hex.png";
-import biodentHexImage from "@/assets/implants/biodent-hex.png";
+import zigomaticImplant from "@/assets/implants/zigomatico-cm16-official-v1.png";
+import bioneckCmhImage from "@/assets/implants/bioneck-cmh-official-v1.png";
+import bioneckTriImage from "@/assets/implants/bioneck-tri-official-v1.png";
+import dynamicCmhImage from "@/assets/implants/dynamic-cmh-official-v1.png";
+import kortHexImage from "@/assets/implants/kort-hex-official-v1.png";
+import biodentHexImage from "@/assets/implants/biodent-hex-official-v1.png";
 
 export const Route = createFileRoute("/implantes")({
   head: () => ({
@@ -41,8 +41,7 @@ export const Route = createFileRoute("/implantes")({
       { name: "twitter:title", content: "Linha de Implantes Dérig" },
       {
         name: "twitter:description",
-        content:
-          "Geometrias, conexões e especificações técnicas da linha de implantes Dérig.",
+        content: "Geometrias, conexões e especificações técnicas da linha de implantes Dérig.",
       },
     ],
   }),
@@ -230,16 +229,19 @@ const qualitySteps = [
 const surgicalProtocols = [
   {
     name: "Bioneck CMH e Bioneck TRI",
-    sequence: "Lança Ø 2,0 → brocas cônicas Ø 3,5 / 4,3 → macho de rosca quando indicado pela densidade óssea.",
+    sequence:
+      "Lança Ø 2,0 → brocas cônicas Ø 3,5 / 4,3 → macho de rosca quando indicado pela densidade óssea.",
     note: "Observação: as brocas Ø 5,0 podem ser adquiridas separadamente.",
   },
   {
     name: "Dynamic CMH e Biodent HEX",
-    sequence: "Lança Ø 2,0 → Ø 2,8 → Ø 3,0 → Ø 3,15 → Ø 3,5 → Ø 4,3, com countersink ou macho de rosca quando indicado.",
+    sequence:
+      "Lança Ø 2,0 → Ø 2,8 → Ø 3,0 → Ø 3,15 → Ø 3,5 → Ø 4,3, com countersink ou macho de rosca quando indicado.",
   },
   {
     name: "Kort HEX",
-    sequence: "Protocolo dedicado com fresas Ø 4 × 5,5 / Ø 4 × 7 / Ø 5 × 5,5 / Ø 5 × 7 e Kit de Brocas Kort recomendado.",
+    sequence:
+      "Protocolo dedicado com fresas Ø 4 × 5,5 / Ø 4 × 7 / Ø 5 × 5,5 / Ø 5 × 7 e Kit de Brocas Kort recomendado.",
   },
 ];
 
@@ -289,10 +291,16 @@ function ImplantsPage() {
             aria-hidden="true"
             className="absolute inset-0 h-full w-full object-cover opacity-30"
           />
-          <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_76%_48%,rgba(243,122,33,0.15),transparent_34%),linear-gradient(90deg,rgba(4,4,4,0.99)_0%,rgba(4,4,4,0.88)_48%,rgba(4,4,4,0.48)_100%)]" />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-[radial-gradient(circle_at_76%_48%,rgba(243,122,33,0.15),transparent_34%),linear-gradient(90deg,rgba(4,4,4,0.99)_0%,rgba(4,4,4,0.88)_48%,rgba(4,4,4,0.48)_100%)]"
+          />
 
           <div className="container-x relative pb-16 lg:pb-20">
-            <a href="/" className="mb-10 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-[color:var(--orange)] lg:mb-12">
+            <a
+              href="/"
+              className="mb-10 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-[color:var(--orange)] lg:mb-12"
+            >
               <ArrowLeft className="h-4 w-4" /> Voltar ao início
             </a>
             <div className="grid items-center gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-12">
@@ -302,18 +310,24 @@ function ImplantsPage() {
                   Precisão para diferentes desafios clínicos.
                 </h1>
                 <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                  Geometrias, conexões e dimensões desenvolvidas para oferecer estabilidade, segurança e previsibilidade em cada indicação.
+                  Geometrias, conexões e dimensões desenvolvidas para oferecer estabilidade,
+                  segurança e previsibilidade em cada indicação.
                 </p>
                 <div className="mt-9 flex flex-wrap gap-3">
                   <a href="#linhas" className="btn-primary">
                     Explorar implantes <ArrowUpRight className="h-4 w-4" />
                   </a>
-                  <a href="#zigomatico" className="btn-ghost">Implante zigomático</a>
+                  <a href="#zigomatico" className="btn-ghost">
+                    Implante zigomático
+                  </a>
                 </div>
               </div>
 
               <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-white/10 bg-black/35 sm:min-h-[620px] lg:min-h-[680px]">
-                <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_62%_50%,rgba(255,255,255,0.13),transparent_46%),radial-gradient(circle_at_90%_52%,rgba(243,122,33,0.18),transparent_42%)]" />
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 bg-[radial-gradient(circle_at_62%_50%,rgba(255,255,255,0.13),transparent_46%),radial-gradient(circle_at_90%_52%,rgba(243,122,33,0.18),transparent_42%)]"
+                />
                 <img
                   src={implantsShowcase}
                   alt="Família de implantes dentários Dérig"
@@ -329,14 +343,19 @@ function ImplantsPage() {
             <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
               <div>
                 <span className="eyebrow">Engenharia Dérig</span>
-                <h2 className="text-display mt-4 text-3xl md:text-5xl">Tecnologia de ponta aliada ao controle de qualidade.</h2>
+                <h2 className="text-display mt-4 text-3xl md:text-5xl">
+                  Tecnologia de ponta aliada ao controle de qualidade.
+                </h2>
               </div>
               <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg lg:pt-14">
                 <p>
-                  Com mais de três décadas de existência e mais de 25 anos dedicados ao mercado odontológico, a Dérig desenvolve soluções que aliam avanços técnico-científicos às necessidades clínicas.
+                  Com mais de três décadas de existência e mais de 25 anos dedicados ao mercado
+                  odontológico, a Dérig desenvolve soluções que aliam avanços técnico-científicos às
+                  necessidades clínicas.
                 </p>
                 <p>
-                  Uma equipe multidisciplinar e o cuidado com matérias-primas, processos e inspeções sustentam o desenvolvimento de soluções clínicas e laboratoriais de alta precisão.
+                  Uma equipe multidisciplinar e o cuidado com matérias-primas, processos e inspeções
+                  sustentam o desenvolvimento de soluções clínicas e laboratoriais de alta precisão.
                 </p>
               </div>
             </div>
@@ -344,25 +363,34 @@ function ImplantsPage() {
             <div className="mt-14 grid gap-5 md:grid-cols-3">
               {qualitySteps.map((step) => (
                 <article key={step.number} className="card-premium p-6 md:p-7">
-                  <span className="text-sm font-bold text-[color:var(--orange)]">{step.number}</span>
+                  <span className="text-sm font-bold text-[color:var(--orange)]">
+                    {step.number}
+                  </span>
                   <h3 className="mt-5 text-lg font-semibold">{step.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{step.text}</p>
                 </article>
               ))}
             </div>
             <p className="mt-5 text-xs leading-relaxed text-muted-foreground/75">
-              A inspeção por amostragem das demais cotas segue processos validados conforme as normas ABNT NBR 5425, 5426 e 5427.
+              A inspeção por amostragem das demais cotas segue processos validados conforme as
+              normas ABNT NBR 5425, 5426 e 5427.
             </p>
           </div>
         </section>
 
-        <section id="linhas" className="border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/35 py-24 md:py-32">
+        <section
+          id="linhas"
+          className="border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/35 py-24 md:py-32"
+        >
           <div className="container-x">
             <div className="max-w-3xl">
               <span className="eyebrow">Portfólio de implantes</span>
-              <h2 className="text-display mt-4 text-3xl md:text-5xl">Cinco linhas para diferentes protocolos.</h2>
+              <h2 className="text-display mt-4 text-3xl md:text-5xl">
+                Cinco linhas para diferentes protocolos.
+              </h2>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-                Todas as linhas apresentam superfície Biotite, com microporosidade obtida por duplo ataque ácido.
+                Todas as linhas apresentam superfície Biotite, com microporosidade obtida por duplo
+                ataque ácido.
               </p>
             </div>
 
@@ -379,9 +407,12 @@ function ImplantsPage() {
             <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
               <div>
                 <span className="eyebrow">Protocolos cirúrgicos</span>
-                <h2 className="text-display mt-4 text-3xl md:text-5xl">Sequências organizadas por macrogeometria.</h2>
+                <h2 className="text-display mt-4 text-3xl md:text-5xl">
+                  Sequências organizadas por macrogeometria.
+                </h2>
                 <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-                  A seleção das fresas e o uso de instrumentos opcionais devem considerar o implante planejado e a densidade óssea encontrada.
+                  A seleção das fresas e o uso de instrumentos opcionais devem considerar o implante
+                  planejado e a densidade óssea encontrada.
                 </p>
               </div>
               <div className="grid gap-4">
@@ -391,9 +422,13 @@ function ImplantsPage() {
                       <ScanLine className="mt-0.5 h-5 w-5 shrink-0 text-[color:var(--orange)]" />
                       <div>
                         <h3 className="font-semibold">{protocol.name}</h3>
-                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{protocol.sequence}</p>
+                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                          {protocol.sequence}
+                        </p>
                         {protocol.note && (
-                          <p className="mt-3 text-xs leading-relaxed text-[color:var(--orange)]">{protocol.note}</p>
+                          <p className="mt-3 text-xs leading-relaxed text-[color:var(--orange)]">
+                            {protocol.note}
+                          </p>
                         )}
                       </div>
                     </div>
@@ -406,9 +441,12 @@ function ImplantsPage() {
               <div className="grid lg:grid-cols-[0.7fr_1.3fr]">
                 <div className="border-b border-white/10 p-7 lg:border-b-0 lg:border-r lg:p-9">
                   <span className="eyebrow">Chaves de inserção</span>
-                  <h3 className="text-display mt-4 text-2xl md:text-3xl">Captura, transporte e inserção com segurança.</h3>
+                  <h3 className="text-display mt-4 text-2xl md:text-3xl">
+                    Captura, transporte e inserção com segurança.
+                  </h3>
                   <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                    O sistema grip amplia a resistência mecânica, preserva a interface e permite iniciar a instalação em contra-ângulo e finalizá-la com torquímetro manual.
+                    O sistema grip amplia a resistência mecânica, preserva a interface e permite
+                    iniciar a instalação em contra-ângulo e finalizá-la com torquímetro manual.
                   </p>
                 </div>
                 <div className="grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
@@ -424,14 +462,21 @@ function ImplantsPage() {
           </div>
         </section>
 
-        <section id="zigomatico" className="border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/35 py-24 md:py-32">
+        <section
+          id="zigomatico"
+          className="border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/35 py-24 md:py-32"
+        >
           <div className="container-x">
             <div className="grid items-stretch gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20">
               <div>
                 <span className="eyebrow">Implante especializado</span>
-                <h2 className="text-display mt-4 text-4xl md:text-6xl">Implante Zigomático CM16.</h2>
+                <h2 className="text-display mt-4 text-4xl md:text-6xl">
+                  Implante Zigomático CM16.
+                </h2>
                 <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
-                  Produzido em titânio comercialmente puro grau 4, possui corpo longo, ápice cônico com ponta arredondada, três câmaras de corte helicoidais e rosca triangular de duas entradas.
+                  Produzido em titânio comercialmente puro grau 4, possui corpo longo, ápice cônico
+                  com ponta arredondada, três câmaras de corte helicoidais e rosca triangular de
+                  duas entradas.
                 </p>
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
                   <Spec icon={CircleDot} label="Diâmetro da rosca" value="Ø 3,75 mm" />
@@ -442,18 +487,26 @@ function ImplantsPage() {
 
                 <article className="card-premium mt-6 p-7 md:p-9">
                   <span className="eyebrow">Indicação de uso</span>
-                  <h3 className="text-display mt-4 text-2xl md:text-3xl">Reabilitações totais em maxilas severamente reabsorvidas.</h3>
+                  <h3 className="text-display mt-4 text-2xl md:text-3xl">
+                    Reabilitações totais em maxilas severamente reabsorvidas.
+                  </h3>
                   <p className="mt-5 text-sm leading-relaxed text-muted-foreground md:text-base">
-                    Indicado para instalação posterior na maxila e ancoragem no osso zigomático quando não é possível instalar implantes convencionais. Em conjunto com outros implantes, oferece suporte à prótese total e não deve ser utilizado em reabilitação unitária.
+                    Indicado para instalação posterior na maxila e ancoragem no osso zigomático
+                    quando não é possível instalar implantes convencionais. Em conjunto com outros
+                    implantes, oferece suporte à prótese total e não deve ser utilizado em
+                    reabilitação unitária.
                   </p>
                   <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-                    A carga imediata somente é indicada quando o paciente apresenta oclusão fisiológica e o implante atinge torque mínimo de 35 Ncm.
+                    A carga imediata somente é indicada quando o paciente apresenta oclusão
+                    fisiológica e o implante atinge torque mínimo de 35 Ncm.
                   </p>
                 </article>
-
               </div>
               <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-white/10 bg-black lg:min-h-0">
-                <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(255,255,255,0.17),transparent_48%),radial-gradient(circle_at_75%_70%,rgba(243,122,33,0.12),transparent_44%)]" />
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(255,255,255,0.17),transparent_48%),radial-gradient(circle_at_75%_70%,rgba(243,122,33,0.12),transparent_44%)]"
+                />
                 <img
                   src={zigomaticImplant}
                   alt="Implante Zigomático Dérig CM16"
@@ -466,13 +519,17 @@ function ImplantsPage() {
             <article className="card-premium mt-12 overflow-hidden">
               <div className="border-b border-white/10 p-7 md:p-9">
                 <span className="eyebrow">Dimensões disponíveis</span>
-                <h3 className="text-display mt-4 text-2xl md:text-3xl">14 comprimentos, de 30 a 62,5 mm.</h3>
+                <h3 className="text-display mt-4 text-2xl md:text-3xl">
+                  14 comprimentos, de 30 a 62,5 mm.
+                </h3>
               </div>
               <div className="grid grid-cols-2 gap-px bg-white/10 sm:grid-cols-3 lg:grid-cols-7">
                 {zigomaticLengths.map((length, index) => (
                   <div key={length} className="bg-[color:var(--card)] p-4 md:p-5">
                     <p className="text-base font-semibold">{length} mm</p>
-                    <p className="mt-1 text-xs text-muted-foreground">Ref. 02.33.36.{String(index + 301)}</p>
+                    <p className="mt-1 text-xs text-muted-foreground">
+                      Ref. 02.33.36.{String(index + 301)}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -480,17 +537,22 @@ function ImplantsPage() {
 
             <div className="mt-12 card-premium p-7 md:p-9">
               <span className="eyebrow">Sequência de perfuração</span>
-              <h3 className="text-display mt-4 text-2xl md:text-3xl">Protocolo do Implante Zigomático CM16.</h3>
+              <h3 className="text-display mt-4 text-2xl md:text-3xl">
+                Protocolo do Implante Zigomático CM16.
+              </h3>
               <ol className="mt-8 grid gap-4 md:grid-cols-5">
                 {zigomaticSteps.map((step, index) => (
                   <li key={step} className="rounded-2xl border border-white/10 bg-black/20 p-5">
-                    <span className="text-sm font-bold text-[color:var(--orange)]">{String(index + 1).padStart(2, "0")}</span>
+                    <span className="text-sm font-bold text-[color:var(--orange)]">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
                     <p className="mt-4 text-sm leading-relaxed text-foreground/85">{step}</p>
                   </li>
                 ))}
               </ol>
               <div className="mt-7 rounded-2xl border border-[color:var(--orange)]/25 bg-[color:var(--orange)]/[0.08] p-5 text-sm leading-relaxed text-foreground/90">
-                A instalação deve começar com o motor a 30 rpm e torque máximo de 35 Ncm. Quando necessário, pode ser finalizada manualmente sem exceder 60 Ncm.
+                A instalação deve começar com o motor a 30 rpm e torque máximo de 35 Ncm. Quando
+                necessário, pode ser finalizada manualmente sem exceder 60 Ncm.
               </div>
             </div>
           </div>
@@ -500,48 +562,76 @@ function ImplantsPage() {
           <div className="container-x">
             <div className="max-w-3xl">
               <span className="eyebrow">Segurança e informação regulatória</span>
-              <h2 className="text-display mt-4 text-3xl md:text-5xl">Uso exclusivo por profissionais habilitados.</h2>
+              <h2 className="text-display mt-4 text-3xl md:text-5xl">
+                Uso exclusivo por profissionais habilitados.
+              </h2>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-                O procedimento zigomático exige conhecimento específico, planejamento clínico e tomográfico e condições cirúrgicas adequadas.
+                O procedimento zigomático exige conhecimento específico, planejamento clínico e
+                tomográfico e condições cirúrgicas adequadas.
               </p>
             </div>
 
             <div className="mt-10 grid gap-4">
               <SafetyDetails title="Contraindicações e seleção do paciente">
                 <p>
-                  Contraindicado para reabilitações unitárias e para pacientes com condições sistêmicas ou locais que prejudiquem cicatrização e osseointegração, incluindo diabetes descontrolada, desordens vasculares ou de coagulação, doença óssea metabólica, infecção intraoral ativa, higiene inadequada, volume ósseo incompatível, abuso de cigarro ou álcool e pacientes em crescimento.
+                  Contraindicado para reabilitações unitárias e para pacientes com condições
+                  sistêmicas ou locais que prejudiquem cicatrização e osseointegração, incluindo
+                  diabetes descontrolada, desordens vasculares ou de coagulação, doença óssea
+                  metabólica, infecção intraoral ativa, higiene inadequada, volume ósseo
+                  incompatível, abuso de cigarro ou álcool e pacientes em crescimento.
                 </p>
                 <p>
-                  Não é indicado para pacientes com sintomas ou patologias dos seios da face. Quimioterapia, radioterapia, inflamação periodontal crônica ou cobertura insuficiente de tecido mole constituem contraindicações temporárias.
+                  Não é indicado para pacientes com sintomas ou patologias dos seios da face.
+                  Quimioterapia, radioterapia, inflamação periodontal crônica ou cobertura
+                  insuficiente de tecido mole constituem contraindicações temporárias.
                 </p>
               </SafetyDetails>
 
               <SafetyDetails title="Precauções, advertências e possíveis efeitos adversos">
                 <p>
-                  A avaliação pré-cirúrgica deve incluir exames radiográficos e/ou tomográficos, condições dos tecidos intraorais e avaliação médica quando indicada. Deve-se evitar superaquecimento ósseo e observar fatores como anticoagulantes, diabetes, bruxismo, hábitos parafuncionais e histórico de radiação em cabeça e pescoço.
+                  A avaliação pré-cirúrgica deve incluir exames radiográficos e/ou tomográficos,
+                  condições dos tecidos intraorais e avaliação médica quando indicada. Deve-se
+                  evitar superaquecimento ósseo e observar fatores como anticoagulantes, diabetes,
+                  bruxismo, hábitos parafuncionais e histórico de radiação em cabeça e pescoço.
                 </p>
                 <p>
-                  Como em outros procedimentos cirúrgicos, podem ocorrer desconforto, edema, infecção, parestesia, perda óssea, fístula, fraturas, falha de osseointegração, peri-implantite e complicações protéticas, estéticas ou biomecânicas. O produto é de uso único e não deve ser reutilizado ou reprocessado.
+                  Como em outros procedimentos cirúrgicos, podem ocorrer desconforto, edema,
+                  infecção, parestesia, perda óssea, fístula, fraturas, falha de osseointegração,
+                  peri-implantite e complicações protéticas, estéticas ou biomecânicas. O produto é
+                  de uso único e não deve ser reutilizado ou reprocessado.
                 </p>
               </SafetyDetails>
 
               <SafetyDetails title="Esterilidade, armazenamento e ressonância magnética">
                 <p>
-                  O produto é fornecido estéril por radiação gama. Deve permanecer lacrado em sua embalagem original, seco e protegido da luz solar, entre 23 °C e 27 °C e com umidade relativa de até 70%.
+                  O produto é fornecido estéril por radiação gama. Deve permanecer lacrado em sua
+                  embalagem original, seco e protegido da luz solar, entre 23 °C e 27 °C e com
+                  umidade relativa de até 70%.
                 </p>
                 <p>
-                  O implante é condicional para ressonância magnética em campos de 1,5 T e 3,0 T, gradiente espacial máximo de 40 T/m e SAR médio máximo de corpo inteiro de 2 W/kg. A exposição contínua em modo normal não deve ultrapassar 15 minutos, e podem ocorrer artefatos de imagem próximos ao implante.
+                  O implante é condicional para ressonância magnética em campos de 1,5 T e 3,0 T,
+                  gradiente espacial máximo de 40 T/m e SAR médio máximo de corpo inteiro de 2 W/kg.
+                  A exposição contínua em modo normal não deve ultrapassar 15 minutos, e podem
+                  ocorrer artefatos de imagem próximos ao implante.
                 </p>
               </SafetyDetails>
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3 text-xs text-muted-foreground">
-              <span className="rounded-full border border-white/10 px-4 py-2">Registro ANVISA 80165910026</span>
-              <span className="rounded-full border border-white/10 px-4 py-2">Instrução de Uso IU-15-02</span>
-              <span className="rounded-full border border-white/10 px-4 py-2">Produto estéril e de uso único</span>
+              <span className="rounded-full border border-white/10 px-4 py-2">
+                Registro ANVISA 80165910026
+              </span>
+              <span className="rounded-full border border-white/10 px-4 py-2">
+                Instrução de Uso IU-15-02
+              </span>
+              <span className="rounded-full border border-white/10 px-4 py-2">
+                Produto estéril e de uso único
+              </span>
             </div>
             <p className="mt-6 text-xs leading-relaxed text-muted-foreground/75">
-              Conteúdo destinado a profissionais da odontologia. As imagens dos produtos não estão necessariamente em escala e a disponibilidade pode variar conforme o mercado. Consulte sempre a instrução de uso vigente e o planejamento individual do paciente.
+              Conteúdo destinado a profissionais da odontologia. As imagens dos produtos não estão
+              necessariamente em escala e a disponibilidade pode variar conforme o mercado. Consulte
+              sempre a instrução de uso vigente e o planejamento individual do paciente.
             </p>
           </div>
         </section>
@@ -559,7 +649,10 @@ function ImplantLineCard({ line }: { line: ImplantLine }) {
     <article className="card-premium overflow-hidden">
       <div className="grid sm:grid-cols-[0.42fr_0.58fr]">
         <div className="relative min-h-72 overflow-hidden bg-black sm:min-h-full">
-          <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_50%_58%,rgba(243,122,33,0.13),transparent_62%)]" />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-[radial-gradient(circle_at_50%_58%,rgba(243,122,33,0.13),transparent_62%)]"
+          />
           <img
             src={line.image}
             alt={line.name}
@@ -568,7 +661,9 @@ function ImplantLineCard({ line }: { line: ImplantLine }) {
           />
         </div>
         <div className="p-6 md:p-7">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[color:var(--orange)]">{line.interface}</span>
+          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[color:var(--orange)]">
+            {line.interface}
+          </span>
           <h3 className="text-display mt-3 text-2xl md:text-3xl">{line.name}</h3>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{line.description}</p>
           <ul className="mt-5 space-y-3">
@@ -627,13 +722,7 @@ function Spec({
   );
 }
 
-function SafetyDetails({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode;
-}) {
+function SafetyDetails({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <details className="group card-premium overflow-hidden">
       <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-6 text-base font-semibold md:px-8">
