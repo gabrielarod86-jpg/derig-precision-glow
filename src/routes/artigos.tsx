@@ -105,7 +105,7 @@ function ArticlesPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <main className="pb-20 pt-28 md:pb-28 md:pt-36">
+      <main className="pb-10 pt-28 md:pb-14 md:pt-36">
         <section className="container-x">
           <a
             href="/#downloads"
@@ -133,7 +133,7 @@ function ArticlesPage() {
           </div>
         </section>
 
-        <section className="container-x mt-14 md:mt-20">
+        <section className="container-x mt-7 md:mt-10">
           <div className="grid gap-5 md:grid-cols-2">
             {articles.map((article, index) => {
               const isPdf = article.type === "pdf";

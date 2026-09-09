@@ -162,7 +162,7 @@ function KitsCirurgicosPage() {
           />
           <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_75%_45%,rgba(255,255,255,0.13),transparent_34%),linear-gradient(90deg,rgba(7,7,7,0.98)_0%,rgba(7,7,7,0.82)_48%,rgba(7,7,7,0.28)_100%)]" />
 
-          <div className="container-x relative pb-16 lg:pb-20">
+          <div className="container-x relative pb-8 lg:pb-10">
             <a href="/" className="mb-10 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-[color:var(--orange)] lg:mb-12">
               <ArrowLeft className="h-4 w-4" /> Voltar ao início
             </a>
@@ -196,7 +196,7 @@ function KitsCirurgicosPage() {
           </div>
         </section>
 
-        <section id="derig-guide" className="py-24 md:py-32">
+        <section id="derig-guide" className="py-12 md:py-16">
           <div className="container-x">
             <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
               <div>
@@ -224,7 +224,7 @@ function KitsCirurgicosPage() {
           </div>
         </section>
 
-        <section className="border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/40 py-24 md:py-32">
+        <section className="border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/40 py-12 md:py-16">
           <div className="container-x">
             <div className="max-w-3xl">
               <span className="eyebrow">Vantagens clínicas</span>
@@ -244,10 +244,10 @@ function KitsCirurgicosPage() {
           </div>
         </section>
 
-        <section className="py-24 md:py-32">
-          <div className="container-x grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-            <div className="card-premium overflow-hidden bg-black">
-              <img src={guideImage} alt="Instrumentais do Kit Dérig Guide" loading="lazy" className="aspect-[4/5] h-full w-full object-contain" />
+        <section id="protocolo-conico" className="scroll-mt-24 py-12 md:py-16">
+          <div className="container-x grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+            <div className="card-premium aspect-[3/2] overflow-hidden bg-black">
+              <img src={guideImage} alt="Instrumentais do Kit Dérig Guide" loading="lazy" className="h-full w-full object-cover" />
             </div>
             <div>
               <span className="eyebrow">Diferenciais</span>
@@ -266,7 +266,7 @@ function KitsCirurgicosPage() {
           </div>
         </section>
 
-        <section className="border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/35 py-24 md:py-32">
+        <section className="border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/35 py-12 md:py-16">
           <div className="container-x">
             <div className="max-w-3xl">
               <span className="eyebrow">Linha de kits</span>
@@ -279,7 +279,7 @@ function KitsCirurgicosPage() {
             <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {kits.map((kit) => (
                 <article key={kit.name} className="card-premium overflow-hidden">
-                  <div className="aspect-[4/5] overflow-hidden bg-black">
+                  <div className="aspect-[3/2] overflow-hidden bg-black">
                     <img src={kit.image} alt={kit.name} loading="lazy" className="h-full w-full object-contain transition-transform duration-700 hover:scale-[1.02]" />
                   </div>
                   <div className="p-6">

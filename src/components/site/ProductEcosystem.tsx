@@ -5,7 +5,7 @@ import backgroundTexture from "@/assets/bg-texture.jpg";
 
 export function ProductEcosystem() {
   return (
-    <section id="sobre" className="relative py-24 md:py-32">
+    <section id="sobre" className="relative py-12 md:py-16">
       <span id="produtos" className="absolute -top-24" aria-hidden="true" />
       <div className="container-x">
         <div className="max-w-3xl">

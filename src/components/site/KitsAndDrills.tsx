@@ -13,7 +13,7 @@ const items = [
 
 export function KitsAndDrills() {
   return (
-    <section className="relative py-24 md:py-32 bg-[color:var(--surface)]/40 border-y border-[color:var(--hairline)]">
+    <section className="relative py-12 md:py-16 bg-[color:var(--surface)]/40 border-y border-[color:var(--hairline)]">
       <div className="container-x grid lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-5">
           <span className="eyebrow">Kits & Fresas</span>
@@ -39,13 +39,13 @@ export function KitsAndDrills() {
             ))}
           </ul>
 
-          <a href="/kits-cirurgicos" className="btn-primary mt-8">
+          <a href="/kits-cirurgicos#protocolo-conico" className="btn-primary mt-8">
             Ver kits e instrumentais <ArrowRight className="h-4 w-4" />
           </a>
         </div>
 
         <div className="lg:col-span-7 grid grid-cols-2 gap-4">
-          <div className="card-premium overflow-hidden aspect-[3/4]">
+          <div className="card-premium overflow-hidden aspect-[3/2]">
             <img
               src={kitGuide}
               alt="Kit Dérig Guide para cirurgia guiada"
@@ -53,7 +53,7 @@ export function KitsAndDrills() {
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="card-premium overflow-hidden aspect-[3/4] translate-y-8">
+          <div className="card-premium overflow-hidden aspect-[3/2]">
             <img
               src={kitConico}
               alt="Kit cirúrgico cônico Dérig"

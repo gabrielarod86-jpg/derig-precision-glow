@@ -52,7 +52,7 @@ function TorqueGuidePage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <main className="pb-20 pt-28 md:pb-28 md:pt-36">
+      <main className="pb-10 pt-28 md:pb-14 md:pt-36">
         <section className="container-x">
           <a
             href="/#downloads"
@@ -95,7 +95,7 @@ function TorqueGuidePage() {
           </div>
         </section>
 
-        <section className="container-x mt-16 md:mt-24">
+        <section className="container-x mt-8 md:mt-12">
           <div className="max-w-3xl">
             <span className="eyebrow">Consulta orientada</span>
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl md:text-5xl">
@@ -140,7 +140,7 @@ function TorqueGuidePage() {
           </div>
         </section>
 
-        <section className="container-x mt-16 md:mt-24">
+        <section className="container-x mt-8 md:mt-12">
           <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
             <div className="max-w-3xl">
               <span className="eyebrow">Tabelas oficiais</span>
@@ -182,7 +182,7 @@ function TorqueGuidePage() {
           </div>
         </section>
 
-        <section className="container-x mt-16 md:mt-24">
+        <section className="container-x mt-8 md:mt-12">
           <div className="rounded-3xl border border-[color:var(--orange)]/35 bg-[linear-gradient(135deg,rgba(255,102,24,0.14),rgba(255,102,24,0.03))] p-7 text-center sm:p-10 md:p-12">
             <h2 className="text-2xl font-semibold tracking-[-0.03em] sm:text-3xl">
               Tenha o guia sempre disponível.

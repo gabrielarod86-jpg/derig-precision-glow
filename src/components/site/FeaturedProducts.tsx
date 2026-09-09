@@ -20,7 +20,7 @@ const products = [
 
 export function FeaturedProducts() {
   return (
-    <section id="produtos" className="relative py-24 md:py-32">
+    <section id="produtos" className="relative py-12 md:py-16">
       <div className="container-x">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 max-w-4xl">
           <div>

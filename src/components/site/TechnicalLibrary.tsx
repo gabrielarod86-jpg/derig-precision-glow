@@ -11,7 +11,7 @@ const docs = [
 
 export function TechnicalLibrary() {
   return (
-    <section id="downloads" className="relative py-24 md:py-32 bg-[color:var(--surface)]/40 border-y border-[color:var(--hairline)]">
+    <section id="downloads" className="relative py-12 md:py-16 bg-[color:var(--surface)]/40 border-y border-[color:var(--hairline)]">
       <div className="container-x">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 max-w-4xl">
           <div>

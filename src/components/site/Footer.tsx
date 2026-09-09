@@ -15,7 +15,7 @@ const cols = [
 export function Footer() {
   return (
     <footer className="relative border-t border-[color:var(--hairline)] bg-black/60">
-      <div className="container-x py-16 grid lg:grid-cols-12 gap-10">
+      <div className="container-x py-8 grid lg:grid-cols-12 gap-10">
         <div className="lg:col-span-4">
           <Logo />
           <p className="mt-5 text-sm text-muted-foreground leading-relaxed max-w-xs">

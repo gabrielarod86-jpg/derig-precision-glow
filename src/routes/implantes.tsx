@@ -325,7 +325,7 @@ function ImplantsPage() {
             className="absolute inset-0 bg-[radial-gradient(circle_at_76%_48%,rgba(243,122,33,0.15),transparent_34%),linear-gradient(90deg,rgba(4,4,4,0.99)_0%,rgba(4,4,4,0.88)_48%,rgba(4,4,4,0.48)_100%)]"
           />
 
-          <div className="container-x relative pb-16 lg:pb-20">
+          <div className="container-x relative pb-8 lg:pb-10">
             <a
               href="/"
               className="mb-10 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-[color:var(--orange)] lg:mb-12"
@@ -367,7 +367,7 @@ function ImplantsPage() {
           </div>
         </section>
 
-        <section className="py-24 md:py-32">
+        <section className="py-12 md:py-16">
           <div className="container-x">
             <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
               <div>
@@ -409,7 +409,7 @@ function ImplantsPage() {
 
         <section
           id="linhas"
-          className="border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/35 py-24 md:py-32"
+          className="border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/35 py-12 md:py-16"
         >
           <div className="container-x">
             <div className="max-w-3xl">
@@ -436,7 +436,7 @@ function ImplantsPage() {
           </div>
         </section>
 
-        <section className="py-24 md:py-32">
+        <section className="py-12 md:py-16">
           <div className="container-x">
             <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
               <div>
@@ -498,7 +498,7 @@ function ImplantsPage() {
 
         <section
           id="zigomatico"
-          className="border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/35 py-24 md:py-32"
+          className="border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/35 py-12 md:py-16"
         >
           <div className="container-x">
             <div className="grid items-stretch gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20">
@@ -592,7 +592,7 @@ function ImplantsPage() {
           </div>
         </section>
 
-        <section className="py-24 md:py-32">
+        <section className="py-12 md:py-16">
           <div className="container-x">
             <div className="max-w-3xl">
               <span className="eyebrow">Segurança e informação regulatória</span>
@@ -686,7 +686,7 @@ function ImplantLineCard({ line }: { line: ImplantLine }) {
   return (
     <article className="card-premium flex h-full flex-col overflow-hidden">
       <div className="grid sm:grid-cols-[0.42fr_0.58fr] sm:items-stretch">
-        <div className="relative flex h-[36rem] items-start justify-center overflow-hidden bg-black px-8 pt-7">
+        <div className="relative flex h-[36rem] items-center justify-center overflow-hidden bg-black px-6 pb-20 pt-4">
           <div
             aria-hidden="true"
             className="absolute inset-0 bg-[radial-gradient(circle_at_50%_58%,rgba(243,122,33,0.13),transparent_62%)]"
@@ -698,8 +698,8 @@ function ImplantLineCard({ line }: { line: ImplantLine }) {
             draggable={false}
             className={`relative z-10 w-auto max-w-none select-none object-top drop-shadow-[0_24px_30px_rgba(0,0,0,0.72)] ${line.imageMode === "cover" ? "object-cover" : "object-contain"}`}
             style={{
-              height: `${line.visualLengthMm * 9}px`,
-              maxHeight: "calc(100% - 5.5rem)",
+              height: `${line.visualLengthMm * 21}px`,
+              maxHeight: "calc(100% - 6rem)",
             }}
           />
           <div className="absolute inset-x-5 bottom-5 z-20 flex items-center justify-between gap-3 border-t border-white/10 pt-4 text-[11px] uppercase tracking-[0.14em] text-muted-foreground">

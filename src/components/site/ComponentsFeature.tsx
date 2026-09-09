@@ -22,7 +22,7 @@ const componentGroups = [
 
 export function ComponentsFeature() {
   return (
-    <section id="componentes" className="relative border-y border-white/5 py-24 md:py-32">
+    <section id="componentes" className="relative border-y border-white/5 py-12 md:py-16">
       <div className="container-x">
         <div className="max-w-3xl">
           <span className="eyebrow">Componentes protéticos</span>

@@ -11,7 +11,7 @@ const items = [
 export function CertificationBar() {
   return (
     <section className="relative border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/40">
-      <div className="container-x py-12 md:py-16">
+      <div className="container-x py-6 md:py-8">
         <div className="grid lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-5">
             <span className="eyebrow">Autoridade & Conformidade</span>

@@ -2,7 +2,7 @@ import { MessageCircle, Mail, MapPin } from "lucide-react";
 
 export function ContactCTA() {
   return (
-    <section id="contato" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="contato" className="relative py-12 md:py-16 overflow-hidden">
       <div
         aria-hidden
         className="absolute inset-0 -z-10"

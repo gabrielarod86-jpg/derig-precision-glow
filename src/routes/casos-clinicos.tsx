@@ -59,7 +59,7 @@ function ClinicalCasesPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <main className="pb-20 pt-28 md:pb-28 md:pt-36">
+      <main className="pb-10 pt-28 md:pb-14 md:pt-36">
         <section className="container-x">
           <a
             href="/#downloads"
@@ -105,7 +105,7 @@ function ClinicalCasesPage() {
           </div>
         </section>
 
-        <section className="container-x mt-16 md:mt-24">
+        <section className="container-x mt-8 md:mt-12">
           <div className="space-y-8">
             {clinicalCases.map((clinicalCase) => {
               const images = Array.from({ length: clinicalCase.imageCount }, (_, index) =>
