@@ -1,5 +1,5 @@
 import { ArrowRight, Download } from "lucide-react";
-import heroBackground from "@/assets/hero-dynamic-user-exact-v2.png";
+import implantDynamic from "@/assets/implant-dynamic-user-exact-cutout-v1.png";
 
 const badges = [
   "Tecnologia Biotite",
@@ -13,22 +13,53 @@ export function HeroSection() {
   return (
     <section
       id="top"
-      className="relative isolate flex min-h-[calc(100svh-4rem)] items-center overflow-hidden py-28 md:min-h-[calc(100svh-5rem)] md:py-36"
+      className="relative isolate flex min-h-[calc(100svh-4rem)] items-center overflow-hidden bg-[#050505] py-28 md:min-h-[calc(100svh-5rem)] md:py-36"
     >
-      <img
-        src={heroBackground}
-        alt=""
-        width={1920}
-        height={1080}
+      <div
         aria-hidden
-        className="absolute inset-0 z-0 h-full w-full object-cover object-[68%_center] sm:object-[65%_center] lg:object-center"
+        className="absolute inset-0 z-0"
+        style={{
+          background:
+            "radial-gradient(ellipse at 73% 46%, rgba(243,122,33,0.18) 0%, rgba(243,122,33,0.06) 25%, transparent 55%), radial-gradient(ellipse at 69% 48%, rgba(255,255,255,0.08) 0%, transparent 30%), linear-gradient(115deg, #030303 0%, #070707 54%, #0c0907 100%)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="absolute inset-y-0 right-[-8%] z-[1] w-[75%] opacity-55 sm:right-[-3%] sm:w-[62%] lg:right-[4%] lg:w-[48%]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle, rgba(255,255,255,0.28) 0 0.7px, transparent 0.9px), radial-gradient(circle, rgba(243,122,33,0.32) 0 0.6px, transparent 0.85px)",
+          backgroundPosition: "0 0, 7px 9px",
+          backgroundSize: "17px 17px, 23px 23px",
+          WebkitMaskImage:
+            "radial-gradient(ellipse at 58% 48%, #000 0%, rgba(0,0,0,0.78) 32%, transparent 72%)",
+          maskImage:
+            "radial-gradient(ellipse at 58% 48%, #000 0%, rgba(0,0,0,0.78) 32%, transparent 72%)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="absolute right-[-10%] top-[12%] z-[2] h-[72%] w-[66%] rounded-[50%] border border-white/10 sm:right-[1%] sm:w-[52%] lg:right-[10%] lg:w-[38%]"
+        style={{ boxShadow: "0 0 80px rgba(243,122,33,0.08), inset 0 0 70px rgba(243,122,33,0.05)" }}
+      />
+      <div
+        aria-hidden
+        className="absolute bottom-[9%] right-[2%] z-[3] h-[18%] w-[58%] rounded-full bg-[rgba(243,122,33,0.16)] blur-3xl sm:right-[8%] sm:w-[44%] lg:right-[14%] lg:w-[30%]"
+      />
+      <img
+        src={implantDynamic}
+        alt="Implante dentário Dynamic Dérig com tratamento de superfície microtexturizado"
+        width={827}
+        height={1902}
+        draggable={false}
+        className="pointer-events-none absolute bottom-[8%] right-[-14%] z-10 h-[70%] w-auto max-w-none select-none object-contain opacity-50 [filter:contrast(1.1)_brightness(0.94)_drop-shadow(0_34px_42px_rgba(0,0,0,0.82))_drop-shadow(0_0_22px_rgba(243,122,33,0.13))] sm:right-[5%] sm:h-[79%] sm:opacity-90 lg:right-[17%] lg:h-[84%] lg:opacity-100"
       />
       <div
         aria-hidden
         className="absolute inset-0 z-20"
         style={{
           background:
-            "linear-gradient(90deg, rgba(3,3,3,0.98) 0%, rgba(3,3,3,0.9) 34%, rgba(3,3,3,0.46) 54%, rgba(3,3,3,0.04) 78%), linear-gradient(180deg, rgba(3,3,3,0.16) 0%, transparent 38%, rgba(3,3,3,0.32) 100%)",
+            "linear-gradient(90deg, rgba(3,3,3,0.99) 0%, rgba(3,3,3,0.93) 34%, rgba(3,3,3,0.48) 53%, rgba(3,3,3,0.03) 74%), linear-gradient(180deg, rgba(3,3,3,0.2) 0%, transparent 42%, rgba(3,3,3,0.5) 100%)",
         }}
       />
 
