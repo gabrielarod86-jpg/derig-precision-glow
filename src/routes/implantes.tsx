@@ -206,6 +206,28 @@ const implantLines: ImplantLine[] = [
       },
     ],
   },
+  {
+    name: "Zigomático CM16",
+    interface: "Cone Morse | CM16",
+    description:
+      "Implante de corpo longo para ancoragem no osso zigomático em reabilitações totais de maxilas severamente reabsorvidas.",
+    image: zigomaticImplant,
+    imageMode: "contain",
+    features: [
+      "Corpo longo em titânio comercialmente puro grau 4",
+      "Ápice cônico com ponta arredondada e três câmaras de corte helicoidais",
+      "Rosca triangular de duas entradas",
+      "14 comprimentos disponíveis, de 30 a 62,5 mm",
+    ],
+    options: [
+      {
+        diameter: "Ø 3,75 mm",
+        lengths: "30 / 32,5 / 35 / 37,5 / 40 / 42,5 / 45 / 47,5 / 50 / 52,5 / 55 / 57,5 / 60 / 62,5 mm",
+        codes: "02.33.36.301 a 02.33.36.314",
+        components: "CM16",
+      },
+    ],
+  },
 ];
 
 const qualitySteps = [
@@ -386,7 +408,7 @@ function ImplantsPage() {
             <div className="max-w-3xl">
               <span className="eyebrow">Portfólio de implantes</span>
               <h2 className="text-display mt-4 text-3xl md:text-5xl">
-                Cinco linhas para diferentes protocolos.
+                Seis linhas para diferentes protocolos.
               </h2>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
                 Todas as linhas apresentam superfície Biotite, com microporosidade obtida por duplo
@@ -646,9 +668,9 @@ function ImplantsPage() {
 
 function ImplantLineCard({ line }: { line: ImplantLine }) {
   return (
-    <article className="card-premium overflow-hidden">
+    <article className="card-premium flex h-full flex-col overflow-hidden">
       <div className="grid sm:grid-cols-[0.42fr_0.58fr]">
-        <div className="relative min-h-72 overflow-hidden bg-black sm:min-h-full">
+        <div className="relative h-[28rem] overflow-hidden bg-black sm:h-[34rem]">
           <div
             aria-hidden="true"
             className="absolute inset-0 bg-[radial-gradient(circle_at_50%_58%,rgba(243,122,33,0.13),transparent_62%)]"
@@ -657,10 +679,10 @@ function ImplantLineCard({ line }: { line: ImplantLine }) {
             src={line.image}
             alt={line.name}
             loading="lazy"
-            className={`relative h-full min-h-72 w-full ${line.imageMode === "cover" ? "object-cover" : "object-contain"}`}
+            className={`absolute inset-0 h-full w-full object-bottom p-6 sm:p-8 ${line.imageMode === "cover" ? "object-cover" : "object-contain"}`}
           />
         </div>
-        <div className="p-6 md:p-7">
+        <div className="p-6 sm:min-h-[34rem] md:p-7">
           <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[color:var(--orange)]">
             {line.interface}
           </span>
