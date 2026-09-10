@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ArtigosRouteImport } from './routes/artigos'
 import { Route as CasosClinicosRouteImport } from './routes/casos-clinicos'
+import { Route as CatalogosRouteImport } from './routes/catalogos'
 import { Route as GuiaDeTorqueRouteImport } from './routes/guia-de-torque'
 import { Route as ImplantesRouteImport } from './routes/implantes'
 import { Route as InstrucoesDeUsoRouteImport } from './routes/instrucoes-de-uso'
@@ -30,6 +31,11 @@ const ArtigosRoute = ArtigosRouteImport.update({
 const CasosClinicosRoute = CasosClinicosRouteImport.update({
   id: '/casos-clinicos',
   path: '/casos-clinicos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CatalogosRoute = CatalogosRouteImport.update({
+  id: '/catalogos',
+  path: '/catalogos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GuiaDeTorqueRoute = GuiaDeTorqueRouteImport.update({
@@ -57,6 +63,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/artigos': typeof ArtigosRoute
   '/casos-clinicos': typeof CasosClinicosRoute
+  '/catalogos': typeof CatalogosRoute
   '/guia-de-torque': typeof GuiaDeTorqueRoute
   '/implantes': typeof ImplantesRoute
   '/instrucoes-de-uso': typeof InstrucoesDeUsoRoute
@@ -66,6 +73,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/artigos': typeof ArtigosRoute
   '/casos-clinicos': typeof CasosClinicosRoute
+  '/catalogos': typeof CatalogosRoute
   '/guia-de-torque': typeof GuiaDeTorqueRoute
   '/implantes': typeof ImplantesRoute
   '/instrucoes-de-uso': typeof InstrucoesDeUsoRoute
@@ -76,6 +84,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/artigos': typeof ArtigosRoute
   '/casos-clinicos': typeof CasosClinicosRoute
+  '/catalogos': typeof CatalogosRoute
   '/guia-de-torque': typeof GuiaDeTorqueRoute
   '/implantes': typeof ImplantesRoute
   '/instrucoes-de-uso': typeof InstrucoesDeUsoRoute
@@ -87,6 +96,7 @@ export interface FileRouteTypes {
     | '/'
     | '/artigos'
     | '/casos-clinicos'
+    | '/catalogos'
     | '/guia-de-torque'
     | '/implantes'
     | '/instrucoes-de-uso'
@@ -96,6 +106,7 @@ export interface FileRouteTypes {
     | '/'
     | '/artigos'
     | '/casos-clinicos'
+    | '/catalogos'
     | '/guia-de-torque'
     | '/implantes'
     | '/instrucoes-de-uso'
@@ -105,6 +116,7 @@ export interface FileRouteTypes {
     | '/'
     | '/artigos'
     | '/casos-clinicos'
+    | '/catalogos'
     | '/guia-de-torque'
     | '/implantes'
     | '/instrucoes-de-uso'
@@ -115,6 +127,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ArtigosRoute: typeof ArtigosRoute
   CasosClinicosRoute: typeof CasosClinicosRoute
+  CatalogosRoute: typeof CatalogosRoute
   GuiaDeTorqueRoute: typeof GuiaDeTorqueRoute
   ImplantesRoute: typeof ImplantesRoute
   InstrucoesDeUsoRoute: typeof InstrucoesDeUsoRoute
@@ -142,6 +155,13 @@ declare module '@tanstack/react-router' {
       path: '/casos-clinicos'
       fullPath: '/casos-clinicos'
       preLoaderRoute: typeof CasosClinicosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/catalogos': {
+      id: '/catalogos'
+      path: '/catalogos'
+      fullPath: '/catalogos'
+      preLoaderRoute: typeof CatalogosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/guia-de-torque': {
@@ -179,6 +199,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ArtigosRoute: ArtigosRoute,
   CasosClinicosRoute: CasosClinicosRoute,
+  CatalogosRoute: CatalogosRoute,
   GuiaDeTorqueRoute: GuiaDeTorqueRoute,
   ImplantesRoute: ImplantesRoute,
   InstrucoesDeUsoRoute: InstrucoesDeUsoRoute,

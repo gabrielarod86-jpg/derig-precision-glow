@@ -31,7 +31,9 @@ export function TechnicalLibrary() {
             <a
               key={title}
               href={
-                title === "Instruções de uso"
+                title === "Catálogos"
+                  ? "/catalogos"
+                  : title === "Instruções de uso"
                   ? "/instrucoes-de-uso"
                   : title === "Guia de torque"
                     ? "/guia-de-torque"
@@ -58,8 +60,8 @@ export function TechnicalLibrary() {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <a href="#contato" className="btn-primary">
-            Acessar downloads <ArrowRight className="h-4 w-4" />
+          <a href="/catalogos" className="btn-primary">
+            Acessar catálogos <ArrowRight className="h-4 w-4" />
           </a>
         </div>
       </div>

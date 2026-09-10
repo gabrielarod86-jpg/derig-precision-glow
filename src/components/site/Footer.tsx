@@ -34,7 +34,17 @@ export function Footer() {
               {c.items.map((i) => (
                 <li key={i}>
                   <a
-                    href={i === "Fale conosco" ? WHATSAPP_URL : "#contato"}
+                    href={
+                      i === "Fale conosco"
+                        ? WHATSAPP_URL
+                        : i === "Catálogos"
+                          ? "/catalogos"
+                          : i === "Instruções de uso"
+                            ? "/instrucoes-de-uso"
+                            : i === "Guia de torque"
+                              ? "/guia-de-torque"
+                              : "/#downloads"
+                    }
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {i}
