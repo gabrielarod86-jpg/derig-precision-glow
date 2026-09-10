@@ -1,7 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import implant from "@/assets/product-conemorse.jpg";
-import implantsShowcase from "@/assets/derig-implantes-4k.png";
-import backgroundTexture from "@/assets/bg-texture.jpg";
+import implantsShowcase from "@/assets/implantes-capa-sem-texto.png";
 
 export function ProductEcosystem() {
   return (
@@ -30,12 +29,6 @@ export function ProductEcosystem() {
 function ImplantFeature() {
   return (
     <article className="card-premium relative min-h-[720px] overflow-hidden sm:min-h-[660px] md:min-h-[520px]">
-      <img
-        src={backgroundTexture}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover opacity-45"
-      />
       <img
         src={implantsShowcase}
         alt="Família de implantes dentários Dérig"

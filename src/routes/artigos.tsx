@@ -36,27 +36,6 @@ const articles = [
   },
   {
     title:
-      "Characterization of a bovine collagen–hydroxyapatite composite scaffold for bone tissue engineering",
-    image: "characterization-of-a-bovine.jpg",
-    href: "https://www.sciencedirect.com/science/article/pii/S0142961203004101",
-    type: "external",
-  },
-  {
-    title:
-      "The Use of a Complex of Collagen Type I with Hydroxyapatite from Bone, as a Bone Implant Substitute: An Experimental Approach",
-    image: "the-use-of-a-complex-of-collagen.jpg",
-    href: "https://www.liebertpub.com/doi/abs/10.1089/ten.1996.2.151",
-    type: "external",
-  },
-  {
-    title:
-      "Natural bovine anorganic apatite and collagen presents osteoconductivity and contribute to bone repair of rat calvaria critical size defect",
-    image: "natural-bovine-anorganic.jpg",
-    href: "https://www.scientific.net/KEM.396-398.249",
-    type: "external",
-  },
-  {
-    title:
       "Modificações na superfície dos implantes dentários: a pesquisa básica à aplicação clínica",
     image: "modificacoes-na-superficie-dos-implantes-dentarios.jpg",
     href: "https://downloads.derig.com.br/artigos/modificacoes-na-superficie-dos-implantes-dentarios.pdf",
