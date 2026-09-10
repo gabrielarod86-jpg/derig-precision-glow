@@ -33,11 +33,11 @@ function ImplantFeature() {
         src={implantsShowcase}
         alt="Família de implantes dentários Dérig"
         loading="lazy"
-        className="absolute inset-0 h-full w-full object-cover object-center"
+        className="absolute inset-0 h-full w-full object-cover object-[68%_center] md:origin-[74%_60%] md:scale-[1.22]"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,3,3,0.98)_0%,rgba(3,3,3,0.90)_38%,rgba(3,3,3,0.28)_72%,rgba(3,3,3,0.72)_100%)]"
+        className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,3,3,0.98)_0%,rgba(3,3,3,0.88)_38%,rgba(3,3,3,0.12)_68%,rgba(3,3,3,0.26)_100%)]"
       />
       <div
         aria-hidden="true"
