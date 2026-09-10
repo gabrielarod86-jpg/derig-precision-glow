@@ -17,6 +17,7 @@ import { Route as GuiaDeTorqueRouteImport } from './routes/guia-de-torque'
 import { Route as ImplantesRouteImport } from './routes/implantes'
 import { Route as InstrucoesDeUsoRouteImport } from './routes/instrucoes-de-uso'
 import { Route as KitsCirurgicosRouteImport } from './routes/kits-cirurgicos'
+import { Route as ProtocolosTecnicosRouteImport } from './routes/protocolos-tecnicos'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -58,6 +59,11 @@ const KitsCirurgicosRoute = KitsCirurgicosRouteImport.update({
   path: '/kits-cirurgicos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProtocolosTecnicosRoute = ProtocolosTecnicosRouteImport.update({
+  id: '/protocolos-tecnicos',
+  path: '/protocolos-tecnicos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -68,6 +74,7 @@ export interface FileRoutesByFullPath {
   '/implantes': typeof ImplantesRoute
   '/instrucoes-de-uso': typeof InstrucoesDeUsoRoute
   '/kits-cirurgicos': typeof KitsCirurgicosRoute
+  '/protocolos-tecnicos': typeof ProtocolosTecnicosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -78,6 +85,7 @@ export interface FileRoutesByTo {
   '/implantes': typeof ImplantesRoute
   '/instrucoes-de-uso': typeof InstrucoesDeUsoRoute
   '/kits-cirurgicos': typeof KitsCirurgicosRoute
+  '/protocolos-tecnicos': typeof ProtocolosTecnicosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -89,6 +97,7 @@ export interface FileRoutesById {
   '/implantes': typeof ImplantesRoute
   '/instrucoes-de-uso': typeof InstrucoesDeUsoRoute
   '/kits-cirurgicos': typeof KitsCirurgicosRoute
+  '/protocolos-tecnicos': typeof ProtocolosTecnicosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +110,7 @@ export interface FileRouteTypes {
     | '/implantes'
     | '/instrucoes-de-uso'
     | '/kits-cirurgicos'
+    | '/protocolos-tecnicos'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/implantes'
     | '/instrucoes-de-uso'
     | '/kits-cirurgicos'
+    | '/protocolos-tecnicos'
   id:
     | '__root__'
     | '/'
@@ -121,6 +132,7 @@ export interface FileRouteTypes {
     | '/implantes'
     | '/instrucoes-de-uso'
     | '/kits-cirurgicos'
+    | '/protocolos-tecnicos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -132,6 +144,7 @@ export interface RootRouteChildren {
   ImplantesRoute: typeof ImplantesRoute
   InstrucoesDeUsoRoute: typeof InstrucoesDeUsoRoute
   KitsCirurgicosRoute: typeof KitsCirurgicosRoute
+  ProtocolosTecnicosRoute: typeof ProtocolosTecnicosRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -192,6 +205,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KitsCirurgicosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/protocolos-tecnicos': {
+      id: '/protocolos-tecnicos'
+      path: '/protocolos-tecnicos'
+      fullPath: '/protocolos-tecnicos'
+      preLoaderRoute: typeof ProtocolosTecnicosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -204,6 +224,7 @@ const rootRouteChildren: RootRouteChildren = {
   ImplantesRoute: ImplantesRoute,
   InstrucoesDeUsoRoute: InstrucoesDeUsoRoute,
   KitsCirurgicosRoute: KitsCirurgicosRoute,
+  ProtocolosTecnicosRoute: ProtocolosTecnicosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

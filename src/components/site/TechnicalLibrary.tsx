@@ -37,6 +37,8 @@ export function TechnicalLibrary() {
                   ? "/instrucoes-de-uso"
                   : title === "Guia de torque"
                     ? "/guia-de-torque"
+                    : title === "Protocolos técnicos"
+                      ? "/protocolos-tecnicos"
                     : title === "Casos clínicos"
                       ? "/casos-clinicos"
                       : title === "Materiais científicos"

@@ -9,7 +9,14 @@ const cols = [
   },
   {
     title: "Suporte",
-    items: ["Downloads", "Instruções de uso", "Guia de torque", "Catálogos", "Fale conosco"],
+    items: [
+      "Downloads",
+      "Instruções de uso",
+      "Guia de torque",
+      "Protocolos técnicos",
+      "Catálogos",
+      "Fale conosco",
+    ],
   },
 ];
 
@@ -43,6 +50,8 @@ export function Footer() {
                             ? "/instrucoes-de-uso"
                             : i === "Guia de torque"
                               ? "/guia-de-torque"
+                              : i === "Protocolos técnicos"
+                                ? "/protocolos-tecnicos"
                               : "/#downloads"
                     }
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
