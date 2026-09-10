@@ -16,7 +16,7 @@ import { Header } from "@/components/site/Header";
 import { ContactCTA } from "@/components/site/ContactCTA";
 import { Footer } from "@/components/site/Footer";
 import { MobileCTA } from "@/components/site/MobileCTA";
-import heroImplant from "@/assets/hero-implant-spotlight-v2.png";
+import guidedSurgeryImage from "@/assets/cirurgia-guiada.png";
 import guideImage from "@/assets/kits/kit-derig-guide.png";
 import conicoImage from "@/assets/kits/kit-cirurgico-conico.png";
 import cilindricoImage from "@/assets/kits/kit-cirurgico-cilindrico.png";
@@ -184,12 +184,12 @@ function KitsCirurgicosPage() {
                 </div>
               </div>
 
-              <div className="relative mx-auto aspect-square w-full max-w-[720px] overflow-hidden rounded-[2rem] border border-white/10 bg-black/30">
+              <div className="relative mx-auto aspect-video w-full max-w-[720px] overflow-hidden rounded-[2rem] border border-white/10 bg-black/30">
                 <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(255,255,255,0.32)_0%,rgba(255,255,255,0.12)_24%,transparent_62%),radial-gradient(circle_at_82%_58%,rgba(243,122,33,0.12),transparent_46%)]" />
                 <img
-                  src={heroImplant}
-                  alt="Implante dentário Dérig com superfície Biotite"
-                  className="relative h-full w-full object-contain"
+                  src={guidedSurgeryImage}
+                  alt="Planejamento digital de cirurgia guiada com o Kit Dérig Guide"
+                  className="relative h-full w-full object-cover"
                 />
               </div>
             </div>
