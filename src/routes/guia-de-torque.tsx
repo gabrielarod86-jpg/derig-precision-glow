@@ -22,6 +22,13 @@ const guideTables = [
     image: "/docs/guia-de-torque/pages/pagina-3.jpg",
     alt: "Tabela de torque para componentes protéticos Dérig",
   },
+  {
+    number: "03",
+    title: "Componentes protéticos de 35 Ncm",
+    description: "Referências de aperto para pilares, provisórios e interfaces protéticas.",
+    image: "/docs/guia-de-torque/pages/pagina-4.jpg",
+    alt: "Componentes protéticos Dérig com torque recomendado de 35 Ncm",
+  },
 ];
 
 export const Route = createFileRoute("/guia-de-torque")({
@@ -157,7 +164,7 @@ function TorqueGuidePage() {
             </a>
           </div>
 
-          <div className="mt-10 grid gap-8 xl:grid-cols-2">
+          <div className="mt-10 grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
             {guideTables.map((table) => (
               <article
                 key={table.number}
