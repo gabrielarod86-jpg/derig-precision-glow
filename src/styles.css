@@ -234,3 +234,29 @@
   to { opacity: 1; transform: translateY(0); }
 }
 .animate-fade-up { animation: fade-up 0.8s ease-out both; }
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow { animation: spin-slow 28s linear infinite; }
+.animate-spin-slow-rev { animation: spin-slow 44s linear infinite reverse; }
+
+@keyframes scan-sweep {
+  0% { transform: translateY(-40%); opacity: 0; }
+  20% { opacity: 0.9; }
+  80% { opacity: 0.9; }
+  100% { transform: translateY(140%); opacity: 0; }
+}
+.animate-scan { animation: scan-sweep 6.5s ease-in-out infinite; }
+
+@keyframes pulse-ring {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.04); }
+}
+.animate-pulse-ring { animation: pulse-ring 5s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float, .animate-spin-slow, .animate-spin-slow-rev,
+  .animate-scan, .animate-pulse-ring { animation: none; }
+}
