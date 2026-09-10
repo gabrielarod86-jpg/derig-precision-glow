@@ -280,7 +280,16 @@ function KitsCirurgicosPage() {
               {kits.map((kit) => (
                 <article key={kit.name} className="card-premium overflow-hidden">
                   <div className="aspect-[3/2] overflow-hidden bg-black">
-                    <img src={kit.image} alt={kit.name} loading="lazy" className="h-full w-full object-contain transition-transform duration-700 hover:scale-[1.02]" />
+                    <img
+                      src={kit.image}
+                      alt={kit.name}
+                      loading="lazy"
+                      className={`h-full w-full transition-transform duration-700 ${
+                        kit.name === "Kit Protético"
+                          ? "object-cover object-[center_62%] hover:scale-[1.02]"
+                          : "object-contain hover:scale-[1.02]"
+                      }`}
+                    />
                   </div>
                   <div className="p-6">
                     <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[color:var(--orange)]">{kit.eyebrow}</span>

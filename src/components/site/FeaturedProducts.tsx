@@ -43,9 +43,11 @@ export function FeaturedProducts() {
                   alt={p.name}
                   loading="lazy"
                   className={`h-full w-full transition-transform duration-700 group-hover:scale-105 ${
-                    ["Componentes Protéticos", "Kits Cirúrgicos", "Kit Protético"].includes(p.name)
-                      ? "object-contain p-3"
-                      : "object-cover"
+                    p.name === "Kit Protético"
+                      ? "object-cover object-[center_62%]"
+                      : ["Componentes Protéticos", "Kits Cirúrgicos"].includes(p.name)
+                        ? "object-contain p-3"
+                        : "object-cover"
                   }`}
                 />
                 <div className="absolute top-3 left-3 text-[10px] uppercase tracking-[0.2em] px-2 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10">
