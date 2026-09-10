@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Logo } from "./Logo";
+import { WHATSAPP_URL } from "@/lib/contact";
 
 const nav = [
   { label: "A Dérig", href: "/#sobre" },
@@ -9,7 +10,7 @@ const nav = [
   { label: "Qualidade", href: "/#qualidade" },
   { label: "Downloads", href: "/#downloads" },
   { label: "Onde Comprar", href: "/#contato" },
-  { label: "Contato", href: "/#contato" },
+  { label: "Contato", href: WHATSAPP_URL },
 ];
 
 export function Header() {
@@ -49,7 +50,7 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <a href="/#contato" className="btn-primary text-sm">
+          <a href={WHATSAPP_URL} className="btn-primary text-sm">
             <MessageCircle className="h-4 w-4" />
             Fale com um consultor
           </a>
@@ -78,7 +79,7 @@ export function Header() {
               </a>
             ))}
             <a
-              href="/#contato"
+              href={WHATSAPP_URL}
               onClick={() => setOpen(false)}
               className="btn-primary mt-4 justify-center"
             >

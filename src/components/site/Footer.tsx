@@ -1,5 +1,6 @@
 import { Instagram, Facebook, Phone, Mail, MessageCircle } from "lucide-react";
 import { Logo } from "./Logo";
+import { WHATSAPP_URL } from "@/lib/contact";
 
 const cols = [
   {
@@ -33,7 +34,7 @@ export function Footer() {
               {c.items.map((i) => (
                 <li key={i}>
                   <a
-                    href="#contato"
+                    href={i === "Fale conosco" ? WHATSAPP_URL : "#contato"}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {i}
@@ -57,7 +58,7 @@ export function Footer() {
             </li>
             <li>
               <a
-                href="https://wa.me/551141618090"
+                href={WHATSAPP_URL}
                 className="flex items-center gap-2 hover:text-[color:var(--orange)] transition-colors"
               >
                 <MessageCircle className="h-4 w-4" /> WhatsApp comercial

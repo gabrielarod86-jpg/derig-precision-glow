@@ -1,6 +1,7 @@
 import { ArrowUpRight, Boxes, ScanLine, Waypoints } from "lucide-react";
 import componentsShowcase from "@/assets/components-portfolio-2026.png";
 import backgroundTexture from "@/assets/bg-texture.jpg";
+import { WHATSAPP_URL } from "@/lib/contact";
 
 const componentGroups = [
   {
@@ -90,7 +91,7 @@ export function ComponentsFeature() {
               </div>
 
               <a
-                href="#contato"
+                href={WHATSAPP_URL}
                 className="mt-8 inline-flex w-fit items-center gap-2 rounded-full border border-[color:var(--orange)] px-5 py-3 text-sm font-semibold text-[color:var(--orange)] transition-colors hover:bg-[color:var(--orange)] hover:text-black"
               >
                 Falar com um consultor <ArrowUpRight className="h-4 w-4" />

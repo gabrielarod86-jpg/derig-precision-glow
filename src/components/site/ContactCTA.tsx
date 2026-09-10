@@ -1,4 +1,5 @@
 import { MessageCircle, Mail, MapPin } from "lucide-react";
+import { WHATSAPP_URL } from "@/lib/contact";
 
 export function ContactCTA() {
   return (
@@ -33,7 +34,7 @@ export function ContactCTA() {
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-3">
-            <a href="https://wa.me/551141618090" className="btn-primary">
+            <a href={WHATSAPP_URL} className="btn-primary">
               <MessageCircle className="h-4 w-4" />
               Falar no WhatsApp
             </a>

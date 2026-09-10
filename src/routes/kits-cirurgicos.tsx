@@ -23,6 +23,7 @@ import cilindricoImage from "@/assets/kits/kit-cirurgico-cilindrico.png";
 import kortImage from "@/assets/kits/kit-de-brocas-kort.png";
 import proteticoImage from "@/assets/kits/kit-protetico.png";
 import backgroundTexture from "@/assets/bg-texture.jpg";
+import { WHATSAPP_URL } from "@/lib/contact";
 
 export const Route = createFileRoute("/kits-cirurgicos")({
   head: () => ({
@@ -180,7 +181,7 @@ function KitsCirurgicosPage() {
                   <a href="#derig-guide" className="btn-primary">
                     Conhecer o protocolo <ArrowUpRight className="h-4 w-4" />
                   </a>
-                  <a href="/#contato" className="btn-ghost">Falar com um consultor</a>
+                  <a href={WHATSAPP_URL} className="btn-ghost">Falar com um consultor</a>
                 </div>
               </div>
 
