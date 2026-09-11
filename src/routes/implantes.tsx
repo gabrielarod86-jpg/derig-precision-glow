@@ -15,7 +15,7 @@ import { ContactCTA } from "@/components/site/ContactCTA";
 import { Footer } from "@/components/site/Footer";
 import { MobileCTA } from "@/components/site/MobileCTA";
 import backgroundTexture from "@/assets/bg-texture.jpg";
-import implantsShowcase from "@/assets/derig-implantes-4k.png";
+import implantsShowcase from "@/assets/implantes-oficial-sem-logo.png";
 import zigomaticImplant from "@/assets/implants/zigomatico-cm16-official-v1.png";
 import bioneckCmhImage from "@/assets/implants/bioneck-cmh-official-v1.png";
 import bioneckTriImage from "@/assets/implants/bioneck-tri-official-v1.png";
@@ -359,7 +359,7 @@ function ImplantsPage() {
                 />
                 <img
                   src={implantsShowcase}
-                  alt="Família de implantes dentários Dérig"
+                  alt="Linhas de implantes TRI, Dynamic, HEX, CMH, Kort e Zigomático"
                   className="absolute inset-0 h-full w-full object-contain object-bottom p-4 drop-shadow-[0_28px_45px_rgba(0,0,0,0.72)] sm:p-8"
                 />
               </div>
