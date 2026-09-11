@@ -1,8 +1,6 @@
-import { Globe2, ShieldCheck, BadgeCheck, Factory, Award } from "lucide-react";
+import { Globe2, Factory, Award } from "lucide-react";
 
 const certs = [
-  { icon: ShieldCheck, label: "ISO 13485", desc: "Gestão da qualidade para dispositivos médicos." },
-  { icon: BadgeCheck, label: "CE", desc: "Conformidade com diretivas europeias." },
   { icon: Award, label: "ANVISA", desc: "Regularização nacional para uso clínico." },
   { icon: Factory, label: "BPF", desc: "Boas Práticas de Fabricação auditadas." },
   { icon: Globe2, label: "Internacional", desc: "Presença em múltiplos mercados." },
@@ -29,11 +27,11 @@ export function GlobalQuality() {
           </h2>
           <p className="mt-5 text-muted-foreground leading-relaxed">
             A Dérig combina engenharia, controle de qualidade, rastreabilidade e
-            certificações para entregar soluções confiáveis à implantodontia.
+            rigor técnico para entregar soluções confiáveis à implantodontia.
           </p>
         </div>
 
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="mt-14 grid sm:grid-cols-3 gap-4">
           {certs.map(({ icon: Icon, label, desc }) => (
             <div key={label} className="card-premium p-6 text-center">
               <div className="mx-auto h-12 w-12 rounded-full flex items-center justify-center bg-[color:var(--orange)]/10 ring-1 ring-[color:var(--orange)]/30">

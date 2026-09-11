@@ -109,8 +109,6 @@ Logo após o hero, criar uma faixa clara ou escura com selos e provas de qualida
 
 Itens:
 
-* ISO 13485
-* CE
 * ANVISA
 * BPF
 * Atuação internacional
@@ -283,7 +281,7 @@ Título:
 
 Texto:
 
-**A Dérig combina engenharia, controle de qualidade, rastreabilidade e certificações para entregar soluções confiáveis à implantodontia.**
+**A Dérig combina engenharia, controle de qualidade, rastreabilidade e rigor técnico para entregar soluções confiáveis à implantodontia.**
 
 Incluir visual com:
 
@@ -294,8 +292,6 @@ Incluir visual com:
 
 Itens:
 
-* ISO 13485
-* CE
 * ANVISA
 * Boas Práticas de Fabricação
 * Presença internacional

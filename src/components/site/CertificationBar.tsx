@@ -1,8 +1,6 @@
-import { ShieldCheck, BadgeCheck, Globe2, Factory, Award } from "lucide-react";
+import { Globe2, Factory, Award } from "lucide-react";
 
 const items = [
-  { icon: ShieldCheck, label: "ISO 13485" },
-  { icon: BadgeCheck, label: "CE" },
   { icon: Award, label: "ANVISA" },
   { icon: Factory, label: "BPF" },
   { icon: Globe2, label: "Atuação internacional" },
@@ -20,7 +18,7 @@ export function CertificationBar() {
               contínuo com segurança, rastreabilidade e desempenho clínico.
             </p>
           </div>
-          <ul className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+          <ul className="lg:col-span-7 grid sm:grid-cols-3 gap-3">
             {items.map(({ icon: Icon, label }) => (
               <li
                 key={label}
