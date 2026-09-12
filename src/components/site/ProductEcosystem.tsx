@@ -1,10 +1,9 @@
 import { ArrowUpRight } from "lucide-react";
-import implant from "@/assets/product-conemorse.jpg";
-import implantsShowcase from "@/assets/implantes-capa-sem-texto.png";
+import implantsShowcase from "@/assets/implantes-oficial-sem-logo.png";
 
 export function ProductEcosystem() {
   return (
-    <section id="sobre" className="relative py-12 md:py-16">
+    <section id="sobre" className="section-flow relative py-16 md:py-24">
       <span id="produtos" className="absolute -top-24" aria-hidden="true" />
       <div className="container-x">
         <div className="max-w-3xl">
@@ -28,20 +27,21 @@ export function ProductEcosystem() {
 
 function ImplantFeature() {
   return (
-    <article className="card-premium relative min-h-[720px] overflow-hidden sm:min-h-[660px] md:min-h-[520px]">
+    <article className="card-premium implant-feature-panel relative min-h-[720px] overflow-hidden sm:min-h-[660px] md:min-h-[520px]">
+      <div
+        aria-hidden="true"
+        className="implant-floor-extension absolute inset-y-0 left-0 hidden w-[58%] bg-left bg-no-repeat md:block"
+        style={{ backgroundImage: `url(${implantsShowcase})` }}
+      />
       <img
         src={implantsShowcase}
-        alt="Família de implantes dentários Dérig"
+        alt="Linhas de implantes TRI, Dynamic, HEX, CMH, Kort e Zigomático"
         loading="lazy"
-        className="absolute inset-0 h-full w-full object-cover object-[68%_center] md:origin-[74%_60%] md:scale-[1.22]"
+        className="implant-showcase-image absolute bottom-[-5%] left-1/2 h-[74%] w-auto max-w-none -translate-x-1/2 object-contain md:bottom-auto md:left-auto md:right-0 md:top-1/2 md:h-[158%] md:translate-x-0 md:-translate-y-1/2"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,3,3,0.98)_0%,rgba(3,3,3,0.88)_38%,rgba(3,3,3,0.12)_68%,rgba(3,3,3,0.26)_100%)]"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute bottom-[-12%] right-[-2%] h-[92%] w-[72%] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.13)_0%,rgba(255,255,255,0.03)_42%,transparent_72%)] blur-2xl"
+        className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,4,5,0.96)_0%,rgba(3,4,5,0.9)_22%,rgba(3,4,5,0.7)_37%,rgba(3,4,5,0.42)_48%,rgba(3,4,5,0.14)_57%,rgba(3,4,5,0)_68%)]"
       />
 
       <div className="relative z-10 flex min-h-[720px] items-start p-7 sm:min-h-[660px] sm:p-10 md:min-h-[520px] md:items-center md:p-12">

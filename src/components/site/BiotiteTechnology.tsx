@@ -11,7 +11,7 @@ export function BiotiteTechnology() {
   return (
     <section
       id="biotite"
-      className="relative overflow-hidden py-12 md:py-16 border-y border-[color:var(--hairline)]"
+      className="section-flow relative overflow-hidden py-16 md:py-24"
     >
       <div
         aria-hidden

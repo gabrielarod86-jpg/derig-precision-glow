@@ -3,7 +3,7 @@ import { WHATSAPP_URL } from "@/lib/contact";
 
 export function ContactCTA() {
   return (
-    <section id="contato" className="relative py-12 md:py-16 overflow-hidden">
+    <section id="contato" className="section-flow relative overflow-hidden py-16 md:py-24">
       <div
         aria-hidden
         className="absolute inset-0 -z-10"
@@ -13,10 +13,10 @@ export function ContactCTA() {
         }}
       />
       <div className="container-x">
-        <div className="card-premium relative overflow-hidden p-8 md:p-16 text-center">
+        <div className="relative overflow-hidden px-6 py-10 text-center md:px-12 md:py-16">
           <div
             aria-hidden
-            className="absolute -top-32 -right-20 h-72 w-72 rounded-full blur-3xl"
+            className="absolute -top-32 right-[8%] h-72 w-72 rounded-full blur-3xl"
             style={{
               background:
                 "radial-gradient(circle, color-mix(in oklab, var(--orange) 35%, transparent), transparent 70%)",

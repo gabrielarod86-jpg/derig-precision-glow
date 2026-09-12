@@ -8,7 +8,7 @@ const certs = [
 
 export function GlobalQuality() {
   return (
-    <section id="qualidade" className="relative py-12 md:py-16 overflow-hidden">
+    <section id="qualidade" className="section-flow relative overflow-hidden py-16 md:py-24">
       <div
         aria-hidden
         className="absolute inset-0 -z-10 opacity-50"

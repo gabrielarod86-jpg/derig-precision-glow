@@ -23,7 +23,7 @@ const componentGroups = [
 
 export function ComponentsFeature() {
   return (
-    <section id="componentes" className="relative border-y border-white/5 py-12 md:py-16">
+    <section id="componentes" className="section-flow relative py-16 md:py-24">
       <div className="container-x">
         <div className="max-w-3xl">
           <span className="eyebrow">Componentes protéticos</span>
@@ -62,7 +62,7 @@ export function ComponentsFeature() {
               />
             </div>
 
-            <div className="relative flex flex-col justify-center border-t border-white/10 bg-black/45 p-7 sm:p-10 lg:border-l lg:border-t-0 lg:p-12">
+            <div className="relative flex flex-col justify-center border-t border-white/[0.06] bg-black/20 p-7 sm:p-10 lg:border-l lg:border-t-0 lg:p-12">
               <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--orange)]">
                 Portfólio integrado
               </span>

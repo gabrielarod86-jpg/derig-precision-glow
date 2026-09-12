@@ -310,7 +310,7 @@ const zigomaticSteps = [
 
 function ImplantsPage() {
   return (
-    <div id="top" className="relative min-h-screen bg-background text-foreground">
+    <div id="top" className="site-backdrop relative min-h-screen text-foreground">
       <Header />
       <main>
         <section className="relative overflow-hidden border-b border-[color:var(--hairline)] pt-28 md:pt-36">
@@ -409,7 +409,7 @@ function ImplantsPage() {
 
         <section
           id="linhas"
-          className="border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/35 py-12 md:py-16"
+          className="section-flow py-16 md:py-24"
         >
           <div className="container-x">
             <div className="max-w-3xl">
@@ -498,7 +498,7 @@ function ImplantsPage() {
 
         <section
           id="zigomatico"
-          className="border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/35 py-12 md:py-16"
+          className="section-flow py-16 md:py-24"
         >
           <div className="container-x">
             <div className="grid items-stretch gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20">

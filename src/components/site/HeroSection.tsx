@@ -13,14 +13,14 @@ export function HeroSection() {
   return (
     <section
       id="top"
-      className="relative isolate flex min-h-[calc(100svh-4rem)] items-center overflow-hidden bg-[#050505] py-28 md:min-h-[calc(100svh-5rem)] md:py-36"
+      className="relative isolate flex min-h-[calc(100svh-4rem)] items-center overflow-hidden bg-transparent py-28 md:min-h-[calc(100svh-5rem)] md:py-36"
     >
       <div
         aria-hidden
-        className="absolute inset-0 z-0"
+        className="hero-layer-fade absolute inset-0 z-0"
         style={{
           background:
-            "radial-gradient(ellipse at 73% 46%, rgba(243,122,33,0.18) 0%, rgba(243,122,33,0.06) 25%, transparent 55%), radial-gradient(ellipse at 69% 48%, rgba(255,255,255,0.08) 0%, transparent 30%), linear-gradient(115deg, #030303 0%, #070707 54%, #0c0907 100%)",
+            "radial-gradient(ellipse at 73% 46%, rgba(243,122,33,0.16) 0%, rgba(243,122,33,0.05) 25%, transparent 55%), radial-gradient(ellipse at 38% 48%, rgba(115,122,128,0.16) 0%, rgba(70,75,80,0.08) 38%, transparent 72%), linear-gradient(115deg, rgba(18,20,22,0.18) 0%, rgba(28,31,34,0.08) 54%, rgba(12,9,7,0.2) 100%)",
         }}
       />
       <div
@@ -56,10 +56,10 @@ export function HeroSection() {
       />
       <div
         aria-hidden
-        className="absolute inset-0 z-20"
+        className="hero-layer-fade absolute inset-0 z-20"
         style={{
           background:
-            "linear-gradient(90deg, rgba(3,3,3,0.99) 0%, rgba(3,3,3,0.93) 34%, rgba(3,3,3,0.48) 53%, rgba(3,3,3,0.03) 74%), linear-gradient(180deg, rgba(3,3,3,0.2) 0%, transparent 42%, rgba(3,3,3,0.5) 100%)",
+            "linear-gradient(90deg, rgba(8,10,12,0.38) 0%, rgba(8,10,12,0.32) 34%, rgba(5,6,7,0.18) 53%, rgba(3,3,3,0.02) 74%), linear-gradient(180deg, rgba(3,3,3,0.03) 0%, transparent 46%, rgba(3,3,3,0.14) 100%)",
         }}
       />
 

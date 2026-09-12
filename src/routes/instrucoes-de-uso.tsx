@@ -86,7 +86,7 @@ const documents = [
 
 function InstructionsForUsePage() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="site-backdrop min-h-screen text-foreground">
       <Header />
       <main className="pb-10 pt-28 md:pb-14 md:pt-36">
         <section className="container-x">

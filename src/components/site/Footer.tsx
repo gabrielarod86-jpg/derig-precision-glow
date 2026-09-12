@@ -22,7 +22,7 @@ const cols = [
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-[color:var(--hairline)] bg-black/60">
+    <footer className="relative border-t border-white/[0.06] bg-black/20 backdrop-blur-sm">
       <div className="container-x py-8 grid lg:grid-cols-12 gap-10">
         <div className="lg:col-span-4">
           <Logo />

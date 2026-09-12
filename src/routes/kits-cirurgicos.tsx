@@ -151,7 +151,7 @@ const kits = [
 
 function KitsCirurgicosPage() {
   return (
-    <div id="top" className="relative min-h-screen bg-background text-foreground">
+    <div id="top" className="site-backdrop relative min-h-screen text-foreground">
       <Header />
       <main>
         <section className="relative overflow-hidden border-b border-[color:var(--hairline)] pt-28 md:pt-36">
@@ -225,7 +225,7 @@ function KitsCirurgicosPage() {
           </div>
         </section>
 
-        <section className="border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/40 py-12 md:py-16">
+        <section className="section-flow py-16 md:py-24">
           <div className="container-x">
             <div className="max-w-3xl">
               <span className="eyebrow">Vantagens clínicas</span>
@@ -267,7 +267,7 @@ function KitsCirurgicosPage() {
           </div>
         </section>
 
-        <section className="border-y border-[color:var(--hairline)] bg-[color:var(--surface)]/35 py-12 md:py-16">
+        <section className="section-flow py-16 md:py-24">
           <div className="container-x">
             <div className="max-w-3xl">
               <span className="eyebrow">Linha de kits</span>

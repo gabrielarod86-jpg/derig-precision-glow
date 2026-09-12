@@ -13,7 +13,7 @@ const items = [
 
 export function KitsAndDrills() {
   return (
-    <section className="relative py-12 md:py-16 bg-[color:var(--surface)]/40 border-y border-[color:var(--hairline)]">
+    <section className="section-flow relative py-16 md:py-24">
       <div className="container-x grid lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-5">
           <span className="eyebrow">Kits & Fresas</span>
