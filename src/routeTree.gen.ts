@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ArtigosRouteImport } from './routes/artigos'
+import { Route as BibliotecaProteticaDigitalRouteImport } from './routes/biblioteca-protetica-digital'
 import { Route as CasosClinicosRouteImport } from './routes/casos-clinicos'
 import { Route as CatalogosRouteImport } from './routes/catalogos'
 import { Route as GuiaDeTorqueRouteImport } from './routes/guia-de-torque'
@@ -29,6 +30,12 @@ const ArtigosRoute = ArtigosRouteImport.update({
   path: '/artigos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BibliotecaProteticaDigitalRoute =
+  BibliotecaProteticaDigitalRouteImport.update({
+    id: '/biblioteca-protetica-digital',
+    path: '/biblioteca-protetica-digital',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const CasosClinicosRoute = CasosClinicosRouteImport.update({
   id: '/casos-clinicos',
   path: '/casos-clinicos',
@@ -68,6 +75,7 @@ const ProtocolosTecnicosRoute = ProtocolosTecnicosRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/artigos': typeof ArtigosRoute
+  '/biblioteca-protetica-digital': typeof BibliotecaProteticaDigitalRoute
   '/casos-clinicos': typeof CasosClinicosRoute
   '/catalogos': typeof CatalogosRoute
   '/guia-de-torque': typeof GuiaDeTorqueRoute
@@ -79,6 +87,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/artigos': typeof ArtigosRoute
+  '/biblioteca-protetica-digital': typeof BibliotecaProteticaDigitalRoute
   '/casos-clinicos': typeof CasosClinicosRoute
   '/catalogos': typeof CatalogosRoute
   '/guia-de-torque': typeof GuiaDeTorqueRoute
@@ -91,6 +100,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/artigos': typeof ArtigosRoute
+  '/biblioteca-protetica-digital': typeof BibliotecaProteticaDigitalRoute
   '/casos-clinicos': typeof CasosClinicosRoute
   '/catalogos': typeof CatalogosRoute
   '/guia-de-torque': typeof GuiaDeTorqueRoute
@@ -104,6 +114,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/artigos'
+    | '/biblioteca-protetica-digital'
     | '/casos-clinicos'
     | '/catalogos'
     | '/guia-de-torque'
@@ -115,6 +126,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/artigos'
+    | '/biblioteca-protetica-digital'
     | '/casos-clinicos'
     | '/catalogos'
     | '/guia-de-torque'
@@ -126,6 +138,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/artigos'
+    | '/biblioteca-protetica-digital'
     | '/casos-clinicos'
     | '/catalogos'
     | '/guia-de-torque'
@@ -138,6 +151,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ArtigosRoute: typeof ArtigosRoute
+  BibliotecaProteticaDigitalRoute: typeof BibliotecaProteticaDigitalRoute
   CasosClinicosRoute: typeof CasosClinicosRoute
   CatalogosRoute: typeof CatalogosRoute
   GuiaDeTorqueRoute: typeof GuiaDeTorqueRoute
@@ -161,6 +175,13 @@ declare module '@tanstack/react-router' {
       path: '/artigos'
       fullPath: '/artigos'
       preLoaderRoute: typeof ArtigosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/biblioteca-protetica-digital': {
+      id: '/biblioteca-protetica-digital'
+      path: '/biblioteca-protetica-digital'
+      fullPath: '/biblioteca-protetica-digital'
+      preLoaderRoute: typeof BibliotecaProteticaDigitalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/casos-clinicos': {
@@ -218,6 +239,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ArtigosRoute: ArtigosRoute,
+  BibliotecaProteticaDigitalRoute: BibliotecaProteticaDigitalRoute,
   CasosClinicosRoute: CasosClinicosRoute,
   CatalogosRoute: CatalogosRoute,
   GuiaDeTorqueRoute: GuiaDeTorqueRoute,
